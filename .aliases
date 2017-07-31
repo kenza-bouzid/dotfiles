@@ -6,6 +6,7 @@ alias path='echo $PATH | tr -s ":" "\n"'
 
 alias pl='print -l'
 
+# Directories size
 alias diru='du -sh * | sort -hr'
 
 # Recent history
@@ -18,3 +19,6 @@ mc() {
   mkdir "$1"
   cd "$1"
 }
+
+# For the dotfiles repo
+alias gtree='git ls-tree -r master --name-only'

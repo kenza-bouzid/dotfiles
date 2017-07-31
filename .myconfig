@@ -1,4 +1,4 @@
-source .secretrc
+source .privaterc
 source .aliases
 source .paths
 

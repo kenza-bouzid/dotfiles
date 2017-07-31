@@ -1,0 +1,20 @@
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+# Pretty print the path (https://github.com/jeffcole/dotfiles/blob/master/aliases)
+alias path='echo $PATH | tr -s ":" "\n"'
+
+alias pl='print -l'
+
+alias diru='du -sh * | sort -hr'
+
+# Recent history
+rhist() {
+  fc -l -"$1"
+}
+
+# mkdir and cd inside
+mc() {
+  mkdir "$1"
+  cd "$1"
+}

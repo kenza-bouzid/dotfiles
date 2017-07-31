@@ -1,0 +1,5 @@
+source .secretrc
+source .aliases
+source .paths
+
+export EDITOR="vim"

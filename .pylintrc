@@ -1,0 +1,10 @@
+[MESSAGES CONTROL]
+# C0321 More than one statement on a single line
+# C0103 Invalid mehotd/attribute name
+# C0301 line too long
+# C0111 missing docstring
+disable=C0321, C0103, C0301
+
+[TYPECHECK]
+# To remove messages like "Module 'numpy' has no 'zeros' member"
+ignored-modules = numpy

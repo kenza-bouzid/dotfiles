@@ -22,3 +22,7 @@ mc() {
 
 # For the dotfiles repo
 alias gtree='git ls-tree -r master --name-only'
+
+# (De)activate conda envs
+alias act='source activate'
+alias dact='source deactivate'

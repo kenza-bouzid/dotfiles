@@ -26,3 +26,8 @@ alias gtree='git ls-tree -r master --name-only'
 # (De)activate conda envs
 alias act='source activate'
 alias dact='source deactivate'
+
+# Open man pages as PDF (https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789)
+function manpdf() {
+ man -t "${1}" | open -f -a /Applications/Preview.app/
+}

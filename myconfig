@@ -1,0 +1,5 @@
+source $HOME/.privaterc
+source $HOME/dotfiles/aliases
+source $HOME/dotfiles/paths
+
+export EDITOR="vim"

@@ -1,5 +1,0 @@
-source .privaterc
-source .aliases
-source .paths
-
-export EDITOR="vim"

@@ -22,7 +22,9 @@
 - Slack
 - Slicer
 - Spectacle
+- Spotify
 - uTorrent
+- VirtualBox
 - VLC
 - Zotero
 
@@ -31,3 +33,5 @@
 - FSL
 - `ffmpeg`
 - `brew`
+- `vim`
+- [QuicklookPlugin](http://dti-tk.sourceforge.net/pmwiki/pmwiki.php?n=QuicklookPlugin.Main)

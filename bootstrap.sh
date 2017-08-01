@@ -35,4 +35,11 @@ apm stars --install
 
 wget https://repo.continuum.io/archive/Anaconda3-4.4.0-MacOSX-x86_64.sh -O ~/anaconda.sh
 bash ~/anaconda.sh -b -p $HOME/anaconda
-rm ~/anaconda.sh
+
+# https://stackoverflow.com/questions/7773181/git-keeps-prompting-me-for-password
+git config --global credential.helper osxkeychain
+mkdir ~/.ssh
+echo "Host *
+   AddKeysToAgent yes
+   UseKeychain yes
+   IdentityFile ~/.ssh/id_rsa" > ~/.ssh/config

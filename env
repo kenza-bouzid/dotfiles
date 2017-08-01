@@ -1,4 +1,0 @@
-export EDITOR="vim"
-
-PATH=$PATH:$HOME/bin
-export PATH=$PATH

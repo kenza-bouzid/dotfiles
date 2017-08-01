@@ -1,18 +1,10 @@
-" Pathogen load
-filetype off
-
-call pathogen#infect()
-call pathogen#helptags()
-
-filetype plugin indent on
-syntax on
-
 " https://stackoverflow.com/questions/3534028/mac-terminal-vim-will-only-use-backspace-when-at-the-end-of-a-line
 set backspace=indent,eol,start
 
 " Show lines numbers
 set number
 
+" Show ruler
 set ruler
 
 " Show partial matches for a search phrase

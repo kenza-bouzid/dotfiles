@@ -1,37 +1,16 @@
 # Apps
-- Atom
 - Audacity
-- CMake
-- Dropbox
-- Evernote
-- Firefox
-- GIMP
-- Google Chrome
-- iTerm
 - ITK-SNAP
-- Keka
 - MATLAB
-- Office
 - Musixmatch
 - NFOVIewer
-- Processing
-- PyCharm
-- Retinizer
 - Shazam
 - Skype
-- Slack
 - Slicer
 - Spectacle
-- Spotify
 - uTorrent
-- VirtualBox
-- VLC
-- Zotero
 
 # Others
 - Anaconda
 - FSL
-- `ffmpeg`
-- `brew`
-- `vim`
 - [QuicklookPlugin](http://dti-tk.sourceforge.net/pmwiki/pmwiki.php?n=QuicklookPlugin.Main)

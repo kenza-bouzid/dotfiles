@@ -35,6 +35,7 @@
 ### Medical imaging
 * [3D Slicer](https://www.slicer.org/)
 * [FSL](https://fsl.fmrib.ox.ac.uk/)
+* [ITK-SNAP](http://www.itksnap.org/)
 
 ### File storage
 * [Dropbox](https://www.dropbox.com/)

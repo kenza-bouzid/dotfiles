@@ -33,6 +33,7 @@ brew cask install firefox
 brew cask install gimp
 brew cask install google-chrome
 brew cask install iterm2
+brew cask install itk-snap
 brew cask install keka
 brew cask install meld
 brew cask install openoffice

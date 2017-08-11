@@ -6,6 +6,9 @@ alias path='echo $PATH | tr -s ":" "\n"'
 
 alias pl='print -l'
 
+# Improve less
+alias less='less -MN'
+
 # Directories size
 alias diru='du -sh * | sort -hr'
 

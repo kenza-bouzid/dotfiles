@@ -19,13 +19,14 @@ brew tap eddieantonio/eddieantonio  # for imgcat
 # Apps
 brew install cmake
 brew install ffmpeg
-brew install htop
+brew install htop  # an interactive process viewer for Unix
 brew install imagemagick
 brew install imgcat
 brew install vim
 brew install wget
 
 brew cask install anaconda
+brew cask install atom
 brew cask install dropbox
 brew cask install evernote
 brew cask install firefox
@@ -34,11 +35,11 @@ brew cask install google-chrome
 brew cask install iterm2
 brew cask install keka
 brew cask install meld
-brew cask install microsoft-office
 brew cask install openoffice
 brew cask install processing
 brew cask install pycharm-ce
 brew cask install slack
+brew cask install slicer-nightly
 brew cask install spotify
 brew cask install sublime-text
 brew cask install virtualbox
@@ -50,7 +51,6 @@ brew cask install zotero
 sudo nvram SystemAudioVolume=" "
 
 # Atom
-brew cask install atom
 apm stars --install
 
 # Conda
@@ -69,13 +69,6 @@ echo "Host *
    AddKeysToAgent yes
    UseKeychain yes
    IdentityFile ~/.ssh/id_rsa" > ~/.ssh/config
-
-# To update Slicer
-cd
-mkdir ~/git
-cd git
-git clone https://github.com/fepegar/slicer-update.git
-mkdir ~/bin
 
 # Temp dir
 ln -s /tmp ~

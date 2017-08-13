@@ -59,8 +59,9 @@
 ### Creative coding
 * [Processing](https://processing.org/)
 
-### Team messaging
+### Messaging
 * [Slack](https://slack.com/)
+* [Telegram](https://telegram.org/)
 
 ### Virtual machine
 * [VirtualBox](https://www.virtualbox.org/)

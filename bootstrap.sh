@@ -43,6 +43,7 @@ brew cask install slack
 brew cask install slicer-nightly
 brew cask install spotify
 brew cask install sublime-text
+brew cask install telegram
 brew cask install virtualbox
 brew cask install visual-studio-code
 brew cask install vlc

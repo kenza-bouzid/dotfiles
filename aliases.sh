@@ -34,3 +34,6 @@ alias dact='source deactivate'
 function manpdf() {
  man -t "${1}" | open -f -a /Applications/Preview.app/
 }
+
+# Python HTTP server
+alias server='python3 -m http.server'

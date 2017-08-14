@@ -4,19 +4,19 @@
 
 ## Contents
 
-### Command line
+### Command line stuff
 * [Oh-My-Zsh](http://ohmyz.sh/)
 * [Homebrew](https://brew.sh/) and [Cask](https://caskroom.github.io/)
 * [iTerm2](https://www.iterm2.com/)
+* [`googler`](https://github.com/jarun/googler)
 * [`htop`](http://hisham.hm/htop/)
 * [`imgcat`](https://github.com/eddieantonio/imgcat)
 * [`wget`](https://www.gnu.org/software/wget/)
-
-### Builder
 * [CMake](https://cmake.org/)
 
 ### Audio, video and image
 * [Spotify](https://www.spotify.com/)
+* [Musixmatch](https://www.musixmatch.com/)
 * [`ffmpeg`](https://www.ffmpeg.org/)
 * [VLC](https://www.videolan.org/vlc/index.html)
 * [ImageMagick](https://www.imagemagick.org/script/index.php)
@@ -59,7 +59,11 @@
 ### Creative coding
 * [Processing](https://processing.org/)
 
-### Messaging
+### Layout manager
+* [Spectacle](https://www.spectacleapp.com/)
+
+### Communication
+* [Skype](https://www.skype.com/)
 * [Slack](https://slack.com/)
 * [Telegram](https://telegram.org/)
 

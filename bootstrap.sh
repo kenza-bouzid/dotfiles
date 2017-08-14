@@ -19,6 +19,7 @@ brew tap eddieantonio/eddieantonio  # for imgcat
 # Apps
 brew install cmake
 brew install ffmpeg
+brew install googler
 brew install htop  # an interactive process viewer for Unix
 brew install imagemagick
 brew install imgcat
@@ -36,11 +37,14 @@ brew cask install iterm2
 brew cask install itk-snap
 brew cask install keka
 brew cask install meld
+brew cask install musixmatch
 brew cask install openoffice
 brew cask install processing
 brew cask install pycharm-ce
+brew cask install skype
 brew cask install slack
 brew cask install slicer-nightly
+brew cask install spectacle
 brew cask install spotify
 brew cask install sublime-text
 brew cask install telegram

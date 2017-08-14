@@ -37,3 +37,6 @@ function manpdf() {
 
 # Python HTTP server
 alias server='python3 -m http.server'
+
+# Googler
+alias g='googler -n 3 -c COM -l en'

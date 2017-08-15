@@ -1,11 +1,8 @@
 # Apps
 - Audacity
 - MATLAB
-- Musixmatch
 - NFOVIewer
 - Shazam
-- Skype
-- Spectacle
 - uTorrent
 
 # Others

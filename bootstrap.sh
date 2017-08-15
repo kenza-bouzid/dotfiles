@@ -13,7 +13,6 @@ rm -rf .git
 # brew install brew-cask
 
 brew tap caskroom/versions  # homebrew-versions
-brew tap buo/cask-upgrade
 brew tap eddieantonio/eddieantonio  # for imgcat
 
 # Apps

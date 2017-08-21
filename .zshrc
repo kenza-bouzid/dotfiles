@@ -51,7 +51,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-syntax-highlighting colored-man-pages git-info)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -86,3 +86,10 @@ source $ZSH/oh-my-zsh.sh
 
 
 source $HOME/dotfiles/myconfig.sh
+
+
+# FSL Setup
+FSLDIR=/Users/fernando/fsl
+PATH=${FSLDIR}/bin:${PATH}
+export FSLDIR PATH
+. ${FSLDIR}/etc/fslconf/fsl.sh

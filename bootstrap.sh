@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+
+sudo -v
+
 # Oh my zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -22,6 +26,7 @@ brew install googler
 brew install htop  # an interactive process viewer for Unix
 brew install imagemagick
 brew install imgcat
+brew install tree
 brew install vim
 brew install wget
 
@@ -52,8 +57,29 @@ brew cask install visual-studio-code
 brew cask install vlc
 brew cask install zotero
 
+# qlplugins
+brew cask install betterzipql
+brew cask install qlmarkdown
+brew cask install qlcolorcode
+brew cask install qlimagesize
+brew cask install qlstephen
+brew cask install quicklook-json
+
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
+
+# Use columns view in all Finder windows by default
+# Four-letter codes for the other view modes: 'icnv', 'Nlsv', 'Flwv'
+defaults write com.apple.finder FXPreferredViewStyle -string 'clmv'
+
+# Show all filename extensions in Finder
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+# Stop iTunes from responding to keyboard media keys
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 
 # Atom
 apm stars --install
@@ -86,4 +112,5 @@ wget https://fsl.fmrib.ox.ac.uk/fsldownloads/fslinstaller.py --directory-prefix 
 # zsh syntax highlighting
 cd ~/.oh-my-zsh/custom/plugins
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
-sed -i 's/plugins=(git)/plugins=(git zsh-syntax-highlighting)/g' ~/.zshrc
+# https://github.com/Eriner/zim/issues/144
+sed -i 's/plugins=(git)/plugins=(git zsh-syntax-highlighting colored-man-pages git-info)/g' ~/.zshrc

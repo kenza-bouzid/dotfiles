@@ -2,10 +2,12 @@
 export EDITOR="vim"
 
 # Anaconda
-export PATH="$HOME/anaconda/bin:$PATH"
+PATH="$HOME/anaconda/bin:$PATH"
 
 # Custom bin
 PATH=$PATH:$HOME/bin
+
+PATH="/usr/local/opt/qt/bin:$PATH"
 
 # Export path
 export PATH=$PATH

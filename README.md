@@ -4,13 +4,14 @@
 
 ## Contents
 
-### Command line stuff
+### Command line
 * [Oh-My-Zsh](http://ohmyz.sh/)
 * [Homebrew](https://brew.sh/) and [Cask](https://caskroom.github.io/)
 * [iTerm2](https://www.iterm2.com/)
 * [`googler`](https://github.com/jarun/googler)
 * [`htop`](http://hisham.hm/htop/)
 * [`imgcat`](https://github.com/eddieantonio/imgcat)
+* [`tree`](http://mama.indstate.edu/users/ice/tree/)
 * [`wget`](https://www.gnu.org/software/wget/)
 * [CMake](https://cmake.org/)
 
@@ -72,3 +73,11 @@
 
 ### Reference management
 * [Zotero](https://www.zotero.org/)
+
+### QuickLook plugins
+* [BetterZip](https://macitbetter.com/BetterZip-Quick-Look-Generator/)
+* [QLMarkdown](https://github.com/toland/qlmarkdown)
+* [QLColorCode](https://code.google.com/archive/p/qlcolorcode/)
+* [QLImageSize](https://github.com/Nyx0uf/qlImageSize)
+* [QLStephen](https://whomwah.github.io/qlstephen/)
+* [quick look JSON](http://www.sagtau.com/quicklookjson.html)

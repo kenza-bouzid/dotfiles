@@ -21,6 +21,7 @@ brew tap eddieantonio/eddieantonio  # for imgcat
 
 # Apps
 brew install cmake
+brew install duti
 brew install ffmpeg
 brew install googler
 brew install htop  # an interactive process viewer for Unix
@@ -81,7 +82,12 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 # Stop iTunes from responding to keyboard media keys
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 
-# Atom
+# Extensions
+for ext in {aac,avi,f4v,flac,m4a,m4b,mkv,mov,mp3,mp4,mpeg,mpg,part,wav,webm}; do duti -s io.mpv "${ext}" all; done # media
+for ext in {7z,bz2,gz,rar,tar,tgz,zip}; do duti -s com.aone.keka "${ext}" all; done # archives
+for ext in {css,js,json,md,php,pug,py,rb,sh,txt}; do duti -s com.github.atom "${ext}" all; done # code
+
+# Atom packages
 apm stars --install
 
 # Conda

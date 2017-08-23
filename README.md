@@ -7,6 +7,7 @@
 ### Command line
 * [Oh-My-Zsh](http://ohmyz.sh/)
 * [Homebrew](https://brew.sh/) and [Cask](https://caskroom.github.io/)
+* [`duti`](https://github.com/moretension/duti)
 * [iTerm2](https://www.iterm2.com/)
 * [`googler`](https://github.com/jarun/googler)
 * [`htop`](http://hisham.hm/htop/)

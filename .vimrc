@@ -31,3 +31,9 @@ if has("mouse_sgr")
 else
     set ttymouse=xterm2
 end
+
+" Syntax highlighting
+syntax on
+
+syntax enable
+colorscheme monokai

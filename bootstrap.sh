@@ -20,52 +20,59 @@ brew tap caskroom/versions  # homebrew-versions
 brew tap eddieantonio/eddieantonio  # for imgcat
 
 # Apps
-brew install cmake
-brew install duti
-brew install ffmpeg
-brew install googler
-brew install htop  # an interactive process viewer for Unix
-brew install imagemagick
-brew install imgcat
-brew install tree
-brew install vim
-brew install wget
+brew install \
+  cmake \
+  duti \
+  ffmpeg \
+  googler \
+  htop \  # an interactive process viewer for Unix
+  imagemagick \
+  imgcat \
+  tree \
+  vim \
+  wget
 
-brew cask install anaconda
-brew cask install atom
-brew cask install cheatsheet
-brew cask install dropbox
-brew cask install evernote
-brew cask install firefox
-brew cask install gimp
-brew cask install google-chrome
-brew cask install iterm2
-brew cask install itk-snap
-brew cask install keka
-brew cask install meld
-brew cask install musixmatch
-brew cask install openoffice
-brew cask install processing
-brew cask install pycharm-ce
-brew cask install skype
-brew cask install slack
-brew cask install slicer-nightly
-brew cask install spectacle
-brew cask install spotify
-brew cask install sublime-text
-brew cask install telegram
-brew cask install virtualbox
-brew cask install visual-studio-code
-brew cask install vlc
-brew cask install zotero
+brew cask install \
+  anaconda \
+  android-file-transfer \
+  atom \
+  cheatsheet \
+  dropbox \
+  evernote \
+  firefox \
+  gimp \
+  google-chrome \
+  iterm2 \
+  itk-snap \
+  keka \
+  meld \
+  musixmatch \
+  openoffice \
+  processing \
+  pycharm-ce \
+  skype \
+  slack \
+  slicer-nightly \
+  spectacle \
+  spotify \
+  sublime-text \
+  telegram \
+  virtualbox \
+  visual-studio-code \
+  vlc \
+  zotero
 
 # qlplugins
-brew cask install betterzipql
-brew cask install qlmarkdown
-brew cask install qlcolorcode
-brew cask install qlimagesize
-brew cask install qlstephen
-brew cask install quicklook-json
+brew cask install \
+  betterzipql \
+  qlmarkdown \
+  qlcolorcode \
+  qlimagesize  \
+  qlstephen \
+  quicklook-json
+
+
+## OS setup ##
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
@@ -110,9 +117,9 @@ git config --global user.email fepegar@gmail.com
 git config --global credential.helper osxkeychain
 mkdir ~/.ssh
 echo "Host *
-   AddKeysToAgent yes
-   UseKeychain yes
-   IdentityFile ~/.ssh/id_rsa" > ~/.ssh/config
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa" > ~/.ssh/config
 
 # Temp dir
 ln -s /tmp ~

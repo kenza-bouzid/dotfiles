@@ -118,8 +118,9 @@ wget https://fsl.fmrib.ox.ac.uk/fsldownloads/fslinstaller.py --directory-prefix 
 # zsh syntax highlighting
 cd ~/.oh-my-zsh/custom/plugins
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
-# https://github.com/Eriner/zim/issues/144
-sed -i 's/plugins=(git)/plugins=(git zsh-syntax-highlighting colored-man-pages git-info)/g' ~/.zshrc
+
+# Custom ZSH theme
+ln -s ~/dotfiles/fer.zsh-theme ~/.oh-my-zsh/themes/
 
 # Install Powerline fonts
 # clone
@@ -131,3 +132,6 @@ cd fonts
 # clean-up a bit
 cd ..
 rm -rf fonts
+
+# Relaunch
+zsh

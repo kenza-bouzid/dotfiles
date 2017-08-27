@@ -33,6 +33,7 @@ brew install wget
 
 brew cask install anaconda
 brew cask install atom
+brew cask install cheatsheet
 brew cask install dropbox
 brew cask install evernote
 brew cask install firefox

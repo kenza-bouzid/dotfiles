@@ -61,7 +61,8 @@
 ### Creative coding
 * [Processing](https://processing.org/)
 
-### Layout manager
+### OS helpers
+* [CheatSheet](https://www.cheatsheetapp.com/CheatSheet/)
 * [Spectacle](https://www.spectacleapp.com/)
 
 ### Communication

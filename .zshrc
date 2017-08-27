@@ -51,8 +51,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# Why git-info? -> https://github.com/Eriner/zim/issues/144
-plugins=(git zsh-syntax-highlighting colored-man-pages git-info)
+plugins=(git zsh-syntax-highlighting colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 

@@ -83,6 +83,12 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 # Stop iTunes from responding to keyboard media keys
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 
+# http://stratus3d.com/blog/2015/02/28/sync-iterm2-profile-with-dotfiles-repository/
+# Specify the preferences directory
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"
+# Tell iTerm2 to use the custom preferences in the directory
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
 # Extensions
 for ext in {aac,avi,f4v,flac,m4a,m4b,mkv,mov,mp3,mp4,mpeg,mpg,part,wav,webm}; do duti -s io.mpv "${ext}" all; done # media
 for ext in {7z,bz2,gz,rar,tar,tgz,zip}; do duti -s com.aone.keka "${ext}" all; done # archives

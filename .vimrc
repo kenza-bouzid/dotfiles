@@ -35,5 +35,22 @@ end
 " Syntax highlighting
 syntax on
 
-syntax enable
-colorscheme monokai
+"syntax enable
+"colorscheme monokai
+
+" Show partial matches for a search phrase
+set incsearch
+
+" Highlight all matching phrases
+set hlsearch
+
+" Ignore upper/lower case when searching
+set ignorecase
+
+" Indent
+filetype plugin indent on
+set tabstop=4           " use 4 spaces to represent tab
+set softtabstop=4
+set shiftwidth=4        " number of spaces to use for auto indent
+set autoindent          " copy indent from current line when starting a new line
+set expandtab

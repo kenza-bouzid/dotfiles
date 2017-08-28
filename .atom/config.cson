@@ -1,0 +1,25 @@
+"*":
+  core:
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      "*.pyc"
+    ]
+    telemetryConsent: "no"
+  editor:
+    fontSize: 11
+    scrollPastEnd: true
+  "exception-reporting":
+    userId: "7fcdc7a4-cabc-4f18-989a-bc8c22f0d6b0"
+  "file-icons": {}
+  "linter-ui-default":
+    panelHeight: 69
+  "tree-view":
+    hideIgnoredNames: true
+  welcome:
+    showOnStartup: false

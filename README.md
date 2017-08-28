@@ -1,11 +1,11 @@
 # Fernando's dotfiles
 
-![Screenshot of my shell prompt](http://i.imgur.com/hJ5Krk1.png)
+![Screenshot of my shell prompt](http://i.imgur.com/iY98kYZ.png)
 
 ## Contents
 
 ### Command line
-* [Oh-My-Zsh](http://ohmyz.sh/)
+* [Oh-My-Zsh](http://ohmyz.sh/) with custom theme based on [Agnoster](https://github.com/agnoster/agnoster-zsh-theme)
 * [Homebrew](https://brew.sh/) and [Cask](https://caskroom.github.io/)
 * [`duti`](https://github.com/moretension/duti)
 * [iTerm2](https://www.iterm2.com/)

@@ -94,4 +94,8 @@ PATH=${FSLDIR}/bin:${PATH}
 export FSLDIR PATH
 . ${FSLDIR}/etc/fslconf/fsl.sh
 
+# SO that it's not prompted by the shell
 DEFAULT_USER="fernando"
+
+source $HOME/dotfiles/aliases.sh
+source $HOME/.privaterc

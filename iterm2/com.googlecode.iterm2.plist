@@ -85,9 +85,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>118 81 965 400 0 0 1280 778 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>314 211 796 473 0 0 1280 778 </string>
+	<string>314 189 796 473 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>32 248 585 477 0 0 1280 778 </string>
+	<string>32 248 865 477 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1 35 1278 741 0 0 1280 778 </string>
 	<key>New Bookmarks</key>
@@ -324,7 +324,7 @@
 				<real>0.0</real>
 			</dict>
 			<key>Cursor Type</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
@@ -738,7 +738,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>A9D12C1F-166D-4436-9A49-CE7B97A1068B</string>
 	<key>NoSyncLastTipTime</key>
-	<real>525577445.802122</real>
+	<real>525663998.74007601</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -766,6 +766,7 @@
 		<string>0013</string>
 		<string>0014</string>
 		<string>0015</string>
+		<string>0016</string>
 	</array>
 	<key>PointerActions</key>
 	<dict>
@@ -801,7 +802,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/fernando/dotfiles/iterm2_profile</string>
+	<string>/Users/fernando/dotfiles/iterm2</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SUEnableAutomaticChecks</key>

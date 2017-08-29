@@ -8,7 +8,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 # Install dotfiles
 cd
 ln -s dotfiles/.* .
-rm -rf .git
+ln -s dotfiles/zsh/.* .
 
 
 # brew
@@ -134,11 +134,11 @@ cd ~/.oh-my-zsh/custom/plugins
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
 # Custom ZSH theme
-ln -s ~/dotfiles/fer.zsh-theme ~/.oh-my-zsh/themes/
-ln -s ~/dotfiles/batcharge.py ~/bin
+ln -s ~/dotfiles/zsh/fer.zsh-theme ~/.oh-my-zsh/themes/
+ln -s ~/dotfiles/utils/batcharge.py ~/bin
 
 # aliases
-ln -s ~/dotfiles/aliases.zsh $ZSH_CUSTOM
+ln -s ~/dotfiles/zsh/aliases.zsh $ZSH_CUSTOM
 
 # Install Powerline fonts
 # clone

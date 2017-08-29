@@ -44,3 +44,5 @@ alias g='googler -n 3 -c COM -l en'
 # 3D Slicer
 alias slicer='/Applications/Slicer.app/Contents/MacOS/Slicer'
 
+# crontab (http://drawohara.com/post/6344279/crontab-temp-file-must-be-edited-in-place)
+alias crontab="VIM_CRONTAB=true crontab"

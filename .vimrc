@@ -54,3 +54,9 @@ set softtabstop=4
 set shiftwidth=4        " number of spaces to use for auto indent
 set autoindent          " copy indent from current line when starting a new line
 set expandtab
+
+" crontab (http://drawohara.com/post/6344279/crontab-temp-file-must-be-edited-in-place)
+:if $VIM_CRONTAB == "true"
+:set nobackup
+:set nowritebackup
+:endif

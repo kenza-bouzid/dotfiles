@@ -137,6 +137,9 @@ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 ln -s ~/dotfiles/fer.zsh-theme ~/.oh-my-zsh/themes/
 ln -s ~/dotfiles/batcharge.py ~/bin
 
+# aliases
+ln -s ~/dotfiles/aliases.zsh $ZSH_CUSTOM
+
 # Install Powerline fonts
 # clone
 cd ~/git

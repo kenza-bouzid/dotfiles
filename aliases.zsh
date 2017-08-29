@@ -40,3 +40,7 @@ alias server='python3 -m http.server'
 
 # Googler
 alias g='googler -n 3 -c COM -l en'
+
+# 3D Slicer
+alias slicer='/Applications/Slicer.app/Contents/MacOS/Slicer'
+

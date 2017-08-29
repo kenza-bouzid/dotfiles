@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AllowClipboardAccess</key>
+	<true/>
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>AlternateMouseScrollStringForDown</key>
@@ -85,7 +87,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>314 211 796 473 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1 293 585 477 0 0 1280 778 </string>
+	<string>32 248 585 477 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1 35 1278 741 0 0 1280 778 </string>
 	<key>New Bookmarks</key>

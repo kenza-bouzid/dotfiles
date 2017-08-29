@@ -46,9 +46,9 @@ color_yellow = '%{[33m%}'
 color_blue = '%{[34m%}'  # not used
 color_reset = '%{[00m%}'
 
-if len(filled) > 6:
+if len(filled) > 5:
     color_out = color_green
-elif len(filled) > 3:
+elif len(filled) > 2:
     color_out = color_yellow
 else:
     color_out = color_red

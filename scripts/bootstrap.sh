@@ -3,6 +3,9 @@
 # Ask for the administrator password upfront
 sudo -v
 
+# xcode command line tools
+xcode-select --install
+
 # Oh my zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 

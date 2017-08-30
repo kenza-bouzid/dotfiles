@@ -60,3 +60,8 @@ set expandtab
 :set nobackup
 :set nowritebackup
 :endif
+
+" Highlight trailing whitespaces
+" https://www.slicer.org/wiki/Documentation/Nightly/Developers/DevelopmentWithGit#pre-commit
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+$/

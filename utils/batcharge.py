@@ -46,12 +46,15 @@ color_yellow = '%{[33m%}'
 color_blue = '%{[34m%}'  # not used
 color_reset = '%{[00m%}'
 
-if len(filled) > 5:
-    color_out = color_green
-elif len(filled) > 2:
-    color_out = color_yellow
+if connected:
+    color_out = color_blue
 else:
-    color_out = color_red
+    if len(filled) > 5:
+        color_out = color_green
+    elif len(filled) > 2:
+        color_out = color_yellow
+    else:
+        color_out = color_red
 
 out = color_out + out + color_reset
 sys.stdout.write(out)

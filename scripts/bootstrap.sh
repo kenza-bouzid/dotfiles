@@ -137,6 +137,9 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
+# Enable remote login
+sudo systemsetup -setremotelogin on
+
 
 # Extensions
 for ext in {aac,avi,f4v,flac,m4a,m4b,mkv,mov,mp3,mp4,mpeg,mpg,part,wav,webm}; do duti -s io.mpv "${ext}" all; done # media

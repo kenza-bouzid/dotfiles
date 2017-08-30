@@ -46,3 +46,6 @@ alias slicer='/Applications/Slicer.app/Contents/MacOS/Slicer'
 
 # crontab (http://drawohara.com/post/6344279/crontab-temp-file-must-be-edited-in-place)
 alias crontab="VIM_CRONTAB=true crontab"
+
+# Get public IP
+alias ip="curl ifconfig.me"

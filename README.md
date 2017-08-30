@@ -2,6 +2,11 @@
 
 ![Screenshot of my shell prompt](http://i.imgur.com/iY98kYZ.png)
 
+Inspired by:
+* [Jeff Cole's post](https://www.foraker.com/blog/get-your-dotfiles-under-control)
+* [Nick Plekhanov’s dotfiles](https://github.com/nicksp/dotfiles)
+* [Vitor Galvao's dotfiles](https://github.com/vitorgalvao/dotfiles)
+
 ## Contents
 
 ### Command line

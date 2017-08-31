@@ -95,3 +95,6 @@ export FSLDIR PATH
 DEFAULT_USER="fernando"
 
 source $HOME/.privaterc
+
+# Why isn't .zshenv sourced?
+source ~/.zshenv

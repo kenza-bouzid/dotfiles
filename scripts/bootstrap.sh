@@ -140,6 +140,10 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 # Enable remote login
 sudo systemsetup -setremotelogin on
 
+telephone='+00 0000 000000'
+email='fernando.garcia.17@ucl.ac.uk'
+sudo -S defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Email: ${email}\nTel: ${telephone}"
+
 
 # Extensions
 for ext in {aac,avi,f4v,flac,m4a,m4b,mkv,mov,mp3,mp4,mpeg,mpg,part,wav,webm}; do duti -s io.mpv "${ext}" all; done # media

@@ -43,7 +43,7 @@ out = (filled + empty)
 color_red = '%{[31m%}'
 color_green = '%{[32m%}'
 color_yellow = '%{[33m%}'
-color_blue = '%{[34m%}'  # not used
+color_blue = '%{[34m%}'
 color_reset = '%{[00m%}'
 
 if connected:

@@ -65,3 +65,16 @@ set expandtab
 " https://www.slicer.org/wiki/Documentation/Nightly/Developers/DevelopmentWithGit#pre-commit
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
+
+" Show relative lines number
+set relativenumber
+
+" Save undo info: https://vi.stackexchange.com/a/53
+if !isdirectory($HOME."/.vim")
+    call mkdir($HOME."/.vim", "", 0770)
+endif
+if !isdirectory($HOME."/.vim/undo-dir")
+    call mkdir($HOME."/.vim/undo-dir", "", 0700)
+endif
+set undodir=~/.vim/undo-dir
+set undofile

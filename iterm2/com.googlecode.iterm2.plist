@@ -14,6 +14,8 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>AppleWindowTabbingMode</key>
+	<string>manual</string>
 	<key>Default Bookmark Guid</key>
 	<string>7E26E76E-3D41-4D29-8E10-F392053FF055</string>
 	<key>DimBackgroundWindows</key>
@@ -36,6 +38,8 @@
 	<integer>32</integer>
 	<key>HotkeyCode</key>
 	<integer>49</integer>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>524288</integer>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -84,12 +88,14 @@
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>118 81 965 400 0 0 1280 778 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>330 290 620 392 0 0 1280 778 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>314 197 796 473 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>23 250 865 477 0 0 1280 778 </string>
+	<string>0 301 865 477 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1 9 1278 765 0 0 1280 778 </string>
+	<string>1 297 865 477 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>267 160 865 477 0 0 1280 778 </string>
 	<key>New Bookmarks</key>
@@ -740,7 +746,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>A9D12C1F-166D-4436-9A49-CE7B97A1068B</string>
 	<key>NoSyncLastTipTime</key>
-	<real>525750503.41138703</real>
+	<real>529404944.35694802</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -770,6 +776,30 @@
 		<string>0015</string>
 		<string>0016</string>
 		<string>0017</string>
+		<string>0018</string>
+		<string>0019</string>
+		<string>0020</string>
+		<string>0021</string>
+		<string>0022</string>
+		<string>0023</string>
+		<string>0024</string>
+		<string>0025</string>
+		<string>0026</string>
+		<string>0027</string>
+		<string>0028</string>
+		<string>0029</string>
+		<string>0030</string>
+		<string>0031</string>
+		<string>0032</string>
+		<string>0033</string>
+		<string>0034</string>
+		<string>0035</string>
+		<string>0036</string>
+		<string>0037</string>
+		<string>0038</string>
+		<string>0039</string>
+		<string>0040</string>
+		<string>0041</string>
 	</array>
 	<key>PointerActions</key>
 	<dict>
@@ -808,6 +838,8 @@
 	<string>/Users/fernando/dotfiles/iterm2</string>
 	<key>PromptOnQuit</key>
 	<false/>
+	<key>SUAutomaticallyUpdate</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -817,7 +849,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-08-30T01:56:21Z</date>
+	<date>2017-10-09T21:44:45Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -845,6 +877,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.15</string>
+	<string>3.1.3</string>
 </dict>
 </plist>

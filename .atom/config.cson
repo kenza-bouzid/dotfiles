@@ -21,5 +21,7 @@
     panelHeight: 69
   "tree-view":
     hideIgnoredNames: true
+  "vim-mode-plus":
+    notifiedCoffeeScriptNoLongerSupportedToExtendVMP: true
   welcome:
     showOnStartup: false

@@ -16,6 +16,9 @@ set hlsearch
 " Ignore upper/lower case when searching
 set ignorecase
 
+" Don't ignore case if search includes upper case
+set smartcase
+
 " Indent
 filetype plugin indent on
 set tabstop=4           " use 4 spaces to represent tab

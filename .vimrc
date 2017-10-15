@@ -25,7 +25,7 @@ set tabstop=4           " use 4 spaces to represent tab
 set softtabstop=4
 set shiftwidth=4        " number of spaces to use for auto indent
 set autoindent          " copy indent from current line when starting a new line
-set expandtab
+set expandtab           " insert space characters when the tab key is pressed
 
 " https://stackoverflow.com/questions/32103591/vim-cant-scroll-in-iterm2
 set mouse=a

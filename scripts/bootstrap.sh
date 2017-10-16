@@ -32,6 +32,7 @@ brew install \
   imgcat \
   tree \
   vim \
+  ack \
   wget
 
 brew cask install \

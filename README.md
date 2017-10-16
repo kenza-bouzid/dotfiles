@@ -20,6 +20,7 @@ Inspired by:
 * [`tree`](http://mama.indstate.edu/users/ice/tree/)
 * [`wget`](https://www.gnu.org/software/wget/)
 * [CMake](https://cmake.org/)
+* [`ack`](https://beyondgrep.com/)
 
 ### Audio, video and image
 * [Spotify](https://www.spotify.com/)

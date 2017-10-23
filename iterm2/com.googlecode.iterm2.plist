@@ -65,7 +65,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAczGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAc7Gdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -93,9 +93,9 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>314 197 796 473 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 301 865 477 0 0 1280 778 </string>
+	<string>280 87 865 477 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1 297 865 477 0 0 1280 778 </string>
+	<string>224 125 865 477 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>267 160 865 477 0 0 1280 778 </string>
 	<key>New Bookmarks</key>
@@ -672,7 +672,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGLForPowerline-Regular 11</string>
+			<string>MesloLGMForPowerline-Regular 11</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -746,7 +746,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>A9D12C1F-166D-4436-9A49-CE7B97A1068B</string>
 	<key>NoSyncLastTipTime</key>
-	<real>529404944.35694802</real>
+	<real>530489999.677737</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -800,6 +800,13 @@
 		<string>0039</string>
 		<string>0040</string>
 		<string>0041</string>
+		<string>0042</string>
+		<string>0043</string>
+		<string>0044</string>
+		<string>0045</string>
+		<string>0046</string>
+		<string>0047</string>
+		<string>0048</string>
 	</array>
 	<key>PointerActions</key>
 	<dict>
@@ -849,7 +856,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-10-09T21:44:45Z</date>
+	<date>2017-10-18T15:32:13Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>

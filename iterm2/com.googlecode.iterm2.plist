@@ -91,7 +91,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>330 290 620 392 0 0 1280 778 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>314 197 796 473 0 0 1280 778 </string>
+	<string>314 158 796 473 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>280 87 865 477 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -710,7 +710,7 @@
 			<key>Shortcut</key>
 			<string></string>
 			<key>Silence Bell</key>
-			<false/>
+			<true/>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tags</key>
@@ -746,7 +746,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>A9D12C1F-166D-4436-9A49-CE7B97A1068B</string>
 	<key>NoSyncLastTipTime</key>
-	<real>530489999.677737</real>
+	<real>530579823.40788698</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -807,6 +807,7 @@
 		<string>0046</string>
 		<string>0047</string>
 		<string>0048</string>
+		<string>0049</string>
 	</array>
 	<key>PointerActions</key>
 	<dict>
@@ -856,7 +857,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-10-18T15:32:13Z</date>
+	<date>2017-10-24T23:04:14Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>

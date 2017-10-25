@@ -152,7 +152,7 @@ wget https://raw.githubusercontent.com/exebetche/vlsub/master/vlsub.lua -P /Appl
 # Extensions
 for ext in {aac,avi,f4v,flac,m4a,m4b,mkv,mov,mp3,mp4,mpeg,mpg,part,wav,webm}; do duti -s io.mpv "${ext}" all; done # media
 for ext in {7z,bz2,gz,rar,tar,tgz,zip}; do duti -s com.aone.keka "${ext}" all; done # archives
-for ext in {css,js,json,md,php,pug,py,rb,sh,txt}; do duti -s com.github.atom "${ext}" all; done # code
+for ext in {css,js,json,m,md,php,pug,py,rb,sh,txt}; do duti -s com.github.atom "${ext}" all; done # code
 
 # Atom packages
 apm stars --install

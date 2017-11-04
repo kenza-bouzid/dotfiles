@@ -53,5 +53,5 @@ alias ip="curl ifconfig.me"
 # Open
 alias op="open"
 
-# Disable media keys
-alias mpv="mpv --input-media-keys=no"
+# Disable media keys and start in a reasonable window
+alias mpv="mpv --input-media-keys=no --autofit=100%"

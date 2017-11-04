@@ -49,3 +49,9 @@ alias crontab="VIM_CRONTAB=true crontab"
 
 # Get public IP
 alias ip="curl ifconfig.me"
+
+# Open
+alias op="open"
+
+# Disable media keys
+alias mpv="mpv --input-media-keys=no"

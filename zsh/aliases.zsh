@@ -55,3 +55,6 @@ alias op="open"
 
 # Disable media keys and start in a reasonable window
 alias mpv="mpv --input-media-keys=no --autofit=100%"
+
+# Quick Look
+alias ql="qlmanage -p"

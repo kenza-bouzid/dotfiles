@@ -57,4 +57,6 @@ alias op="open"
 alias mpv="mpv --input-media-keys=no --autofit=100%"
 
 # Quick Look
-alias ql="qlmanage -p"
+ql() {
+    qlmanage -p "$1" >& /dev/null &
+}

@@ -91,11 +91,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>330 290 620 392 0 0 1280 778 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>314 158 796 473 0 0 1280 778 </string>
+	<string>314 179 918 452 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>280 87 865 477 0 0 1280 778 </string>
+	<string>0 27 1280 751 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>224 125 865 477 0 0 1280 778 </string>
+	<string>3 4 634 774 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>267 160 865 477 0 0 1280 778 </string>
 	<key>New Bookmarks</key>
@@ -718,7 +718,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.067878605769230771</real>
+			<real>0.0</real>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -746,7 +746,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>A9D12C1F-166D-4436-9A49-CE7B97A1068B</string>
 	<key>NoSyncLastTipTime</key>
-	<real>530579823.40788698</real>
+	<real>532314927.71206701</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -808,6 +808,23 @@
 		<string>0047</string>
 		<string>0048</string>
 		<string>0049</string>
+		<string>0050</string>
+		<string>0051</string>
+		<string>0052</string>
+		<string>0053</string>
+		<string>0054</string>
+		<string>0055</string>
+		<string>0056</string>
+		<string>0057</string>
+		<string>0058</string>
+		<string>0059</string>
+		<string>0060</string>
+		<string>0061</string>
+		<string>0062</string>
+		<string>0063</string>
+		<string>0064</string>
+		<string>0065</string>
+		<string>0066</string>
 	</array>
 	<key>PointerActions</key>
 	<dict>
@@ -882,6 +899,8 @@
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>

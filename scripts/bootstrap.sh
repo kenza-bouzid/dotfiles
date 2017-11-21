@@ -78,7 +78,7 @@ brew cask install \
 ## OS setup ##
 
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
+sudo nvram SystemAudioVolume="%00"
 
 # Use columns view in all Finder windows by default
 # Four-letter codes for the other view modes: 'icnv', 'Nlsv', 'Flwv'

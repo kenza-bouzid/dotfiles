@@ -10,7 +10,7 @@ alias pl='print -l'
 alias less='less -MN'
 
 # Directories size
-alias diru='du -sh * | sort -hr'
+alias diru='du -sh * | sort -r'
 
 # Recent history
 rhist() {

@@ -2,7 +2,8 @@
 # C0321 More than one statement on a single line
 # C0103 Invalid method/attribute name
 # E1123 Unexpected keyword argument
-disable=C0321, C0103, E1123
+# R0915 Too many statements
+disable=C0321, C0103, E1123, R0915
 
 [TYPECHECK]
 # To remove messages like "Module 'numpy' has no 'zeros' member"

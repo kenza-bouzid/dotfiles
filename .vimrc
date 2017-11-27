@@ -99,3 +99,7 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
+
+" Yank and paste using clipboard
+" https://evertpot.com/osx-tmux-vim-copy-paste-clipboard/
+set clipboard=unnamed

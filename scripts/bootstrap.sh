@@ -150,7 +150,8 @@ sudo -S defaults write /Library/Preferences/com.apple.loginwindow LoginwindowTex
 wget https://raw.githubusercontent.com/exebetche/vlsub/master/vlsub.lua -P /Applications/VLC.app/Contents/MacOS/share/lua/extensions
 
 # Extensions
-for ext in {aac,avi,f4v,flac,m4a,m4b,mkv,mov,mp3,mp4,mpeg,mpg,part,wav,webm}; do duti -s io.mpv "${ext}" all; done # media
+for ext in {avi,m4a,mkv,mov,mp4,mpeg,mpg}; do duti -s io.mpv "${ext}" all; done # media
+for ext in {aac,flac,m4a,mp3,part,wav,webm}; do duti -s org.videolan.vlc "${ext}" all; done # media
 for ext in {7z,bz2,gz,rar,tar,tgz,zip}; do duti -s com.aone.keka "${ext}" all; done # archives
 for ext in {css,js,json,m,md,php,pug,py,rb,sh,txt}; do duti -s com.github.atom "${ext}" all; done # code
 

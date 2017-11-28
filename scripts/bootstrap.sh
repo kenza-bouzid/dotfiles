@@ -44,6 +44,7 @@ brew cask install \
   evernote \
   firefox \
   gimp \
+  github \
   google-chrome \
   iterm2 \
   itk-snap \
@@ -56,6 +57,7 @@ brew cask install \
   skype \
   slack \
   slicer-nightly \
+  sourcetree \
   spectacle \
   spotify \
   sublime-text \

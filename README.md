@@ -22,6 +22,10 @@ Inspired by:
 * [CMake](https://cmake.org/)
 * [`ack`](https://beyondgrep.com/)
 
+### Version control
+* [GitHub Desktop](https://desktop.github.com/)
+* [Sourcetree](https://www.sourcetreeapp.com/)
+
 ### Audio, video and image
 * [Spotify](https://www.spotify.com/)
 * [Musixmatch](https://www.musixmatch.com/)

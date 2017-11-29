@@ -1,9 +1,10 @@
 [MESSAGES CONTROL]
 # C0321 More than one statement on a single line
 # C0103 Invalid method/attribute name
+# C0301 Line too long
 # E1123 Unexpected keyword argument
-# R0915 Too many statements
-disable=C0321, C0103, E1123, R0915
+# R1705 Unnecesary "else" after "return"
+disable=C0321, C0103, C0301, E1123, R1705
 
 [TYPECHECK]
 # To remove messages like "Module 'numpy' has no 'zeros' member"

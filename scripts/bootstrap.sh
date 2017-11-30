@@ -24,6 +24,7 @@ brew tap eddieantonio/eddieantonio  # for imgcat
 # Apps
 brew install \
   cmake \
+  coreutils \
   duti \
   ffmpeg \
   googler \

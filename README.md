@@ -12,6 +12,7 @@ Inspired by:
 ### Command line
 * [Oh-My-Zsh](http://ohmyz.sh/) with custom theme based on [Agnoster](https://github.com/agnoster/agnoster-zsh-theme)
 * [Homebrew](https://brew.sh/) and [Cask](https://caskroom.github.io/)
+* [Coreutils](https://www.gnu.org/software/coreutils/coreutils.html)
 * [`duti`](https://github.com/moretension/duti)
 * [iTerm2](https://www.iterm2.com/)
 * [`googler`](https://github.com/jarun/googler)

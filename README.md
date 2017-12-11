@@ -43,7 +43,7 @@ Inspired by:
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 ### Python
-* [Anaconda](https://www.continuum.io/)
+* [Miniconda](https://conda.io/miniconda.html)
 
 ### Medical imaging
 * [3D Slicer](https://www.slicer.org/)

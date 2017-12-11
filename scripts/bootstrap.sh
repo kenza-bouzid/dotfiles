@@ -37,7 +37,6 @@ brew install \
   wget
 
 brew cask install \
-  anaconda \
   android-file-transfer \
   atom \
   cheatsheet \
@@ -52,6 +51,7 @@ brew cask install \
   keka \
   mactex \
   meld \
+  miniconda \
   musixmatch \
   openoffice \
   processing \

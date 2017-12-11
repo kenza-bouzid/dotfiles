@@ -27,7 +27,6 @@
   "file-icons": {}
   "linter-ui-default":
     panelHeight: 69
-    showPanel: true
   "tree-view":
     hideIgnoredNames: true
   "vim-mode-plus":

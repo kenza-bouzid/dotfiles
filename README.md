@@ -95,3 +95,6 @@ Inspired by:
 * [QLImageSize](https://github.com/Nyx0uf/qlImageSize)
 * [QLStephen](https://whomwah.github.io/qlstephen/)
 * [quick look JSON](http://www.sagtau.com/quicklookjson.html)
+
+### LaTeX
+* [MacTeX](https://www.tug.org/mactex/)

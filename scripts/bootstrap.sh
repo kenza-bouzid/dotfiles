@@ -50,6 +50,7 @@ brew cask install \
   iterm2 \
   itk-snap \
   keka \
+  mactex \
   meld \
   musixmatch \
   openoffice \

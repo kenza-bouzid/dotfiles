@@ -60,3 +60,6 @@ alias mpv="mpv --input-media-keys=no --autofit=100%"
 ql() {
     qlmanage -p "$1" >& /dev/null &
 }
+
+# Free space
+alias free="conda clean --all && brew cleanup && brew cask cleanup"

@@ -23,6 +23,7 @@ brew tap eddieantonio/eddieantonio  # for imgcat
 
 # Apps
 brew install \
+  ack \
   cmake \
   coreutils \
   duti \
@@ -31,9 +32,9 @@ brew install \
   htop \  # an interactive process viewer for Unix
   imagemagick \
   imgcat \
+  poppler \  # includes pdfimages
   tree \
   vim \
-  ack \
   wget
 
 brew cask install \

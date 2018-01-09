@@ -10,6 +10,7 @@ Inspired by:
 ## Contents
 
 ### Command line
+* [`ack`](https://beyondgrep.com/)
 * [Oh-My-Zsh](http://ohmyz.sh/) with custom theme based on [Agnoster](https://github.com/agnoster/agnoster-zsh-theme)
 * [Homebrew](https://brew.sh/) and [Cask](https://caskroom.github.io/)
 * [Coreutils](https://www.gnu.org/software/coreutils/coreutils.html)
@@ -18,10 +19,10 @@ Inspired by:
 * [`googler`](https://github.com/jarun/googler)
 * [`htop`](http://hisham.hm/htop/)
 * [`imgcat`](https://github.com/eddieantonio/imgcat)
+* [Poppler](https://poppler.freedesktop.org/)
 * [`tree`](http://mama.indstate.edu/users/ice/tree/)
 * [`wget`](https://www.gnu.org/software/wget/)
 * [CMake](https://cmake.org/)
-* [`ack`](https://beyondgrep.com/)
 
 ### Version control
 * [GitHub Desktop](https://desktop.github.com/)

@@ -98,3 +98,5 @@ source $HOME/.privaterc
 
 # Why isn't .zshenv sourced?
 source ~/.zshenv
+
+export AOC_SESSION=53616c7465645f5f3067ac0e931861b645871bbb97647b118d16a80b5553077e7ffd7157f594a583e55fca2dad53aa61

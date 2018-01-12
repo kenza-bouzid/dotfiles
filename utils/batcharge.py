@@ -11,7 +11,6 @@ import subprocess
 
 p = subprocess.Popen(["ioreg", "-rc", "AppleSmartBattery"], stdout=subprocess.PIPE, encoding='utf8')
 output = p.communicate()[0]
-# print(type(output))
 
 for line in output.splitlines():
     if 'MaxCapacity' in line:

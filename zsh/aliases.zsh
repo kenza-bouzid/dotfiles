@@ -63,3 +63,7 @@ ql() {
 
 # Free space
 alias free="conda clean --all && brew cleanup && brew cask cleanup"
+
+# Exit
+alias q="exit"
+

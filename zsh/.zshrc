@@ -7,7 +7,11 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="fer" #terminalparty"
+#ZSH_THEME="fer"
+# POWERLEVEL9K_MODE='awesome-fontconfig'
+ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="terminalparty"
+#ZSH_THEME="spaceship"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -100,3 +104,30 @@ source $HOME/.privaterc
 source ~/.zshenv
 
 export AOC_SESSION=53616c7465645f5f3067ac0e931861b645871bbb97647b118d16a80b5553077e7ffd7157f594a583e55fca2dad53aa61
+
+
+#. /Users/fernando/torch/install/bin/torch-activate
+
+export NIFTYREG_INSTALL=/Users/fernando/git/niftyreg-install
+PATH=${PATH}:${NIFTYREG_INSTALL}/bin
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${NIFTYREG_INSTALL}/lib
+export PATH
+export LD_LIBRARY_PATH
+
+DYLD_FALLBACK_LIBRARY_PATH=$HOME/anaconda3/lib:/usr/local/lib:/usr/lib
+export DYLD_FALLBACK_LIBRARY_PATH
+export PATH="/usr/local/opt/opencv@2/bin:$PATH"
+export PATH="/usr/local/opt/qt/bin:$PATH"
+
+
+# NifTK
+export PATH=/Applications/niftk-17.11.0/NiftyView.app/Contents/MacOS:$PATH
+
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs battery command_execution_time time)
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+
+export PATH=/Users/fernando/Qt/5.4/clang_64/bin:$PATH
+
+

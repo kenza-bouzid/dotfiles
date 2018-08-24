@@ -54,7 +54,7 @@ alias ip="curl ifconfig.me"
 alias op="open"
 
 # Disable media keys and start in a reasonable window
-alias mpv="mpv --input-media-keys=no --autofit=100%"
+alias mpv="mpv --input-media-keys=no --autofit=100% --save-position-on-quit"
 
 # Quick Look
 ql() {
@@ -62,5 +62,8 @@ ql() {
 }
 
 # Free space
-alias free="conda clean --all && brew cleanup && brew cask cleanup"
+alias free="conda clean --all -y && brew cleanup && brew cask cleanup"
 
+alias count="cd ~/git/mres-project-report/ && texcount -1 -sum -inc Thesis.tex && 1"
+
+alias comic="ssh -t fperezga@storm.cs.ucl.ac.uk ssh fperezga@comic100.cs.ucl.ac.uk"

@@ -1,0 +1,15 @@
+Host *
+   AddKeysToAgent yes
+   UseKeychain yes
+   IdentityFile ~/.ssh/id_rsa
+
+Host github.com
+Hostname github.com
+User git
+IdentityFile ~/.ssh/id_rsa
+
+Host comic100
+   User fperezga
+   HostName comic100.cs.ucl.ac.uk
+   proxyCommand ssh -W comic100.cs.ucl.ac.uk:22 fperezga@storm.cs.ucl.ac.uk
+

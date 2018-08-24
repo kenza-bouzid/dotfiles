@@ -62,7 +62,7 @@ ql() {
 }
 
 # Free space
-alias free="conda clean --all -y && brew cleanup && brew cask cleanup"
+alias free="conda clean --all -y && brew cleanup"
 
 alias count="cd ~/git/mres-project-report/ && texcount -1 -sum -inc Thesis.tex && 1"
 

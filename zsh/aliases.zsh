@@ -27,8 +27,8 @@ mc() {
 alias gtree='git ls-tree -r master --name-only'
 
 # (De)activate conda envs
-alias act='source activate'
-alias dact='source deactivate'
+alias act='conda activate'
+alias dact='conda deactivate'
 
 # Open man pages as PDF (https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789)
 function manpdf() {
@@ -66,4 +66,24 @@ alias free="conda clean --all -y && brew cleanup"
 
 alias count="cd ~/git/mres-project-report/ && texcount -1 -sum -inc Thesis.tex && 1"
 
-alias comic="ssh -t fperezga@storm.cs.ucl.ac.uk ssh fperezga@comic100.cs.ucl.ac.uk"
+alias comic="ssh comic100"
+alias storm="ssh fperezga@storm.cs.ucl.ac.uk"
+
+
+alias clc="clear"
+
+### LESS ###
+# Enable syntax-highlighting in less.
+# brew install source-highlight
+# First, add these two lines to ~/.bashrc
+export LESSOPEN="| src-hilite-lesspipe.sh %s"
+export LESS=" -R "
+alias less='less -m -N -g -i -J --underline-special --SILENT'
+alias more='less'
+
+alias ffmpeg='ffmpeg -hide_banner'
+alias ffprobe='ffprobe -hide_banner'
+
+# Better man pages
+alias man="tldr"
+

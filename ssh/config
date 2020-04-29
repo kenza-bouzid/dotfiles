@@ -1,15 +1,118 @@
+Host github.com
+    ForwardX11 no
+
 Host *
    AddKeysToAgent yes
    UseKeychain yes
    IdentityFile ~/.ssh/id_rsa
+#   ForwardX11 yes
+#   ForwardX11Trusted yes
+   ServerAliveInterval 30
 
 Host github.com
 Hostname github.com
 User git
 IdentityFile ~/.ssh/id_rsa
 
-Host comic100
+Host tails
    User fperezga
-   HostName comic100.cs.ucl.ac.uk
-   proxyCommand ssh -W comic100.cs.ucl.ac.uk:22 fperezga@storm.cs.ucl.ac.uk
+   HostName tails.cs.ucl.ac.uk
 
+Host kratos
+   User fernando
+   HostName localhost
+   proxyCommand ssh -W localhost:19999 tails
+
+Host beaker
+   User fperezga
+   HostName beaker.cs.ucl.ac.uk
+   proxyCommand ssh -W beaker.cs.ucl.ac.uk:22 tails
+
+Host beaker
+   User fperezga
+   HostName beaker.cs.ucl.ac.uk
+   proxyCommand ssh -W beaker.cs.ucl.ac.uk:22 tails
+
+Host transfer
+   User fperezga
+   HostName transfer.legion.rc.ucl.ac.uk
+   proxyCommand ssh -W transfer.legion.rc.ucl.ac.uk:22 tails
+
+Host arescasa
+   User fernando
+   HostName arescasa.hopto.org
+
+Host arescasa-tunnel
+   User fernando
+   HostName arescasa.hopto.org
+   LocalForward 16006 127.0.0.1:6006
+   LocalForward 16007 127.0.0.1:6007
+   LocalForward 18888 127.0.0.1:8888
+   LocalForward 19000 0.0.0.0:9000
+
+Host bouncer
+   User fpg18
+   HostName bouncer.isd.kcl.ac.uk
+
+Host ares
+   HostName 10.246.159.165
+   proxyCommand ssh -q -W 10.246.159.165:22 bouncer
+
+Host ares-tunnel
+   HostName 10.246.159.165
+   proxyCommand ssh -q -W 10.246.159.165:22 bouncer
+   LocalForward 16006 127.0.0.1:6006
+   LocalForward 16007 127.0.0.1:6007
+   LocalForward 18888 127.0.0.1:8888
+   LocalForward 18889 127.0.0.1:8889
+   LocalForward 19000 0.0.0.0:9000
+
+Host marc
+   User fperez
+   HostName 10.202.67.201
+   proxyCommand ssh -q -W 10.202.67.201:22 bouncer
+
+Host marc-tunnel
+   User fperez
+   HostName 10.202.67.201
+   proxyCommand ssh -q -W 10.202.67.201:22 bouncer
+   LocalForward 16006 127.0.0.1:6006
+   LocalForward 16007 127.0.0.1:6007
+   LocalForward 18888 127.0.0.1:8888
+   LocalForward 18889 127.0.0.1:8889
+   LocalForward 19000 0.0.0.0:9000
+
+Host oeslle
+   HostName 10.246.159.38
+   proxyCommand ssh -q -W 10.246.159.38:22 bouncer
+
+Host oeslle-tunnel
+   HostName 10.246.159.38
+   proxyCommand ssh -q -W 10.246.159.38:22 bouncer
+   LocalForward 16006 127.0.0.1:6006
+   LocalForward 16007 127.0.0.1:6007
+   LocalForward 18888 127.0.0.1:8888
+   LocalForward 19000 0.0.0.0:9000
+
+Host adelie
+   HostName gift-adelie.isd.kcl.ac.uk
+   proxyCommand ssh -q -W gift-adelie.isd.kcl.ac.uk:44387 fpg18@bouncer.isd.kcl.ac.uk
+
+Host adelie-tunnel
+   HostName gift-adelie.isd.kcl.ac.uk
+   proxyCommand ssh -q -W gift-adelie.isd.kcl.ac.uk:44387 fpg18@bouncer.isd.kcl.ac.uk
+   LocalForward 16006 127.0.0.1:6006
+   LocalForward 16007 127.0.0.1:6007
+   LocalForward 18888 127.0.0.1:8888
+   LocalForward 19000 0.0.0.0:9000
+
+Host dgx
+   User fernando
+   HostName 128.16.4.132
+   proxyCommand ssh -W 128.16.4.132:22 fperezga@tails.cs.ucl.ac.uk
+
+Host dgx-tunnel
+   User fernando
+   HostName 128.16.4.132
+   LocalForward 16006 127.0.0.1:6006
+   proxyCommand ssh -W 128.16.4.132:22 fperezga@tails.cs.ucl.ac.uk

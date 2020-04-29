@@ -1,3 +1,5 @@
+export TERM="xterm-256color"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -11,7 +13,6 @@ export ZSH=$HOME/.oh-my-zsh
 # POWERLEVEL9K_MODE='awesome-fontconfig'
 ZSH_THEME="powerlevel9k/powerlevel9k"
 #ZSH_THEME="terminalparty"
-#ZSH_THEME="spaceship"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -55,7 +56,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting colored-man-pages)
+plugins=(tmux git zsh-syntax-highlighting colored-man-pages zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,16 +104,7 @@ source $HOME/.privaterc
 # Why isn't .zshenv sourced?
 source ~/.zshenv
 
-export AOC_SESSION=53616c7465645f5f3067ac0e931861b645871bbb97647b118d16a80b5553077e7ffd7157f594a583e55fca2dad53aa61
-
-
 #. /Users/fernando/torch/install/bin/torch-activate
-
-export NIFTYREG_INSTALL=/Users/fernando/git/niftyreg-install
-PATH=${PATH}:${NIFTYREG_INSTALL}/bin
-LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${NIFTYREG_INSTALL}/lib
-export PATH
-export LD_LIBRARY_PATH
 
 DYLD_FALLBACK_LIBRARY_PATH=$HOME/anaconda3/lib:/usr/local/lib:/usr/lib
 export DYLD_FALLBACK_LIBRARY_PATH
@@ -121,8 +113,13 @@ export PATH="/usr/local/opt/qt/bin:$PATH"
 
 
 # NifTK
-export PATH=/Applications/niftk-17.11.0/NiftyView.app/Contents/MacOS:$PATH
+export PATH=$PATH:/Applications/niftk-17.11.0/NiftyView.app/Contents/MacOS
 
+export NIFTYREG_INSTALL=/Users/fernando/git/niftyreg/install
+PATH=${NIFTYREG_INSTALL}/bin:$PATH
+LD_LIBRARY_PATH={NIFTYREG_INSTALL}/lib:${LD_LIBRARY_PATH}
+export PATH
+export LD_LIBRARY_PATH
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs battery command_execution_time time)
@@ -130,4 +127,33 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 
 export PATH=/Users/fernando/Qt/5.4/clang_64/bin:$PATH
 
+# https://superuser.com/a/610025
+unsetopt correct_all
+setopt correct
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/fernando/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/fernando/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/fernando/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/fernando/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+LESSPIPE=`which src-hilite-lesspipe.sh`
+export LESSOPEN="| ${LESSPIPE} %s"
+export LESS=' -R '
+
+
+# added by travis gem
+[ -f /Users/fernando/.travis/travis.sh ] && source /Users/fernando/.travis/travis.sh
+
+conda activate episurg
 

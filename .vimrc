@@ -44,9 +44,6 @@ set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=85
 
-"syntax enable
-colorscheme solarized8_dark
-
 " Show partial matches for a search phrase
 set incsearch
 

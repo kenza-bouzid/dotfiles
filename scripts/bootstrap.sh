@@ -11,8 +11,8 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 # Install dotfiles
 cd
-ln -s dotfiles/.* .
-ln -s dotfiles/zsh/.* .
+ln -s $HOME/git/dotfiles/.* .
+ln -s $HOME/git/dotfiles/zsh/.* .
 
 
 # brew
@@ -100,7 +100,7 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 
 # http://stratus3d.com/blog/2015/02/28/sync-iterm2-profile-with-dotfiles-repository/
 # Specify the preferences directory
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$HOME/git/dotfiles/iterm2"
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
@@ -193,11 +193,11 @@ cd ~/.oh-my-zsh/custom/plugins
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
 # Custom ZSH theme
-ln -s ~/dotfiles/zsh/fer.zsh-theme ~/.oh-my-zsh/themes/
-ln -s ~/dotfiles/utils/batcharge.py ~/bin
+ln -s $HOME/git/dotfiles/zsh/fer.zsh-theme ~/.oh-my-zsh/themes/
+ln -s $HOME/git/dotfiles/utils/batcharge.py ~/bin
 
 # aliases
-ln -s ~/dotfiles/zsh/aliases.zsh $ZSH_CUSTOM
+ln -s $HOME/git/dotfiles/zsh/aliases.zsh $ZSH_CUSTOM
 
 # Install Powerline fonts
 # clone

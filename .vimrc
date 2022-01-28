@@ -85,18 +85,6 @@ endif
 set undodir=~/.vim/undo-dir
 set undofile
 
-" These will help me learn Vim
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-nnoremap j gj
-nnoremap k gk
-
 " Yank and paste using clipboard
 " https://evertpot.com/osx-tmux-vim-copy-paste-clipboard/
 set clipboard=unnamed

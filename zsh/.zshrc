@@ -11,8 +11,8 @@ export ZSH=$HOME/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="fer"
 # POWERLEVEL9K_MODE='awesome-fontconfig'
-ZSH_THEME="powerlevel9k/powerlevel9k"
-#ZSH_THEME="terminalparty"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="terminalparty"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,6 +49,11 @@ COMPLETION_WAITING_DOTS="true"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="mm/dd/yyyy"
 
+# From https://unix.stackexchange.com/a/273929/445640
+HISTFILE=~/.zsh_history
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -56,7 +61,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(tmux git zsh-syntax-highlighting colored-man-pages zsh-autosuggestions)
+plugins=(tmux git gitfast zsh-syntax-highlighting colored-man-pages zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,13 +95,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-# FSL Setup
-FSLDIR=$HOME/fsl
-PATH=${FSLDIR}/bin:${PATH}
-export FSLDIR PATH
-. ${FSLDIR}/etc/fslconf/fsl.sh
 
-# SO that it's not prompted by the shell
+# So that it's not prompted by the shell
 DEFAULT_USER="fernando"
 
 source $HOME/.privaterc
@@ -104,56 +104,20 @@ source $HOME/.privaterc
 # Why isn't .zshenv sourced?
 source ~/.zshenv
 
-#. /Users/fernando/torch/install/bin/torch-activate
-
-DYLD_FALLBACK_LIBRARY_PATH=$HOME/anaconda3/lib:/usr/local/lib:/usr/lib
-export DYLD_FALLBACK_LIBRARY_PATH
-export PATH="/usr/local/opt/opencv@2/bin:$PATH"
-export PATH="/usr/local/opt/qt/bin:$PATH"
-
-
-# NifTK
-export PATH=$PATH:/Applications/niftk-17.11.0/NiftyView.app/Contents/MacOS
-
-export NIFTYREG_INSTALL=/Users/fernando/git/niftyreg/install
-PATH=${NIFTYREG_INSTALL}/bin:$PATH
-LD_LIBRARY_PATH={NIFTYREG_INSTALL}/lib:${LD_LIBRARY_PATH}
-export PATH
-export LD_LIBRARY_PATH
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs battery command_execution_time time)
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-
-export PATH=/Users/fernando/Qt/5.4/clang_64/bin:$PATH
-
-# https://superuser.com/a/610025
-unsetopt correct_all
-setopt correct
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/fernando/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/fernando/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/fernando/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/fernando/miniconda3/bin:$PATH"
+        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
-LESSPIPE=`which src-hilite-lesspipe.sh`
-export LESSOPEN="| ${LESSPIPE} %s"
-export LESS=' -R '
-
-
-# added by travis gem
-[ -f /Users/fernando/.travis/travis.sh ] && source /Users/fernando/.travis/travis.sh
-
-conda activate episurg
-
+export PATH="/usr/local/sbin:$PATH"

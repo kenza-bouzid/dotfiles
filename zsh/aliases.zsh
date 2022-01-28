@@ -62,7 +62,7 @@ ql() {
 }
 
 # Free space
-alias free="conda clean --all -y && brew cleanup"
+alias free="conda clean --all -y && brew cleanup && pip cache purge"
 
 alias count="cd ~/git/mres-project-report/ && texcount -1 -sum -inc Thesis.tex && 1"
 
@@ -81,7 +81,7 @@ export LESS=" -R "
 alias less='less -m -N -g -i -J --underline-special --SILENT'
 alias more='less'
 
-alias ffmpeg='ffmpeg -hide_banner'
+alias ffmpeg='ffmpeg -hide_banner -loglevel warning'
 alias ffprobe='ffprobe -hide_banner'
 
 # Better man pages

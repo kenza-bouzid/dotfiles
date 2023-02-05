@@ -11,6 +11,7 @@ alias less='less -MN'
 
 # Directories size
 alias diru='du -sh * | gsort -hr'
+alias dirua='du -sh * .* | gsort -hr'
 
 # Recent history
 rhist() {

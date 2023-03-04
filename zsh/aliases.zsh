@@ -18,12 +18,6 @@ rhist() {
   fc -l -"$1"
 }
 
-# mkdir and cd inside
-mc() {
-  mkdir "$1"
-  cd "$1"
-}
-
 # For the dotfiles repo
 alias gtree='git ls-tree -r master --name-only'
 
@@ -39,9 +33,6 @@ function manpdf() {
 # Python HTTP server
 alias server='python3 -m http.server'
 
-# Googler
-alias g='googler -n 3 -c COM -l en'
-
 # 3D Slicer
 alias slicer='/Applications/Slicer.app/Contents/MacOS/Slicer'
 
@@ -54,37 +45,13 @@ alias ip="curl ifconfig.me"
 # Open
 alias op="open"
 
-# Disable media keys and start in a reasonable window
-alias mpv="mpv --input-media-keys=no --autofit=100% --save-position-on-quit"
-
-# Quick Look
-ql() {
-    qlmanage -p "$1" >& /dev/null &
-}
-
 # Free space
 alias free="conda clean --all -y && brew cleanup && pip cache purge"
 
-alias count="cd ~/git/mres-project-report/ && texcount -1 -sum -inc Thesis.tex && 1"
-
-alias comic="ssh comic100"
-alias storm="ssh fperezga@storm.cs.ucl.ac.uk"
-
-
 alias clc="clear"
-
-### LESS ###
-# Enable syntax-highlighting in less.
-# brew install source-highlight
-# First, add these two lines to ~/.bashrc
-export LESSOPEN="| src-hilite-lesspipe.sh %s"
-export LESS=" -R "
-alias less='less -m -N -g -i -J --underline-special --SILENT'
-alias more='less'
 
 alias ffmpeg='ffmpeg -hide_banner -loglevel warning'
 alias ffprobe='ffprobe -hide_banner'
 
 # Better man pages
 alias man="tldr"
-

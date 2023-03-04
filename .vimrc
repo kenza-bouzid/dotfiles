@@ -88,3 +88,5 @@ set undofile
 " Yank and paste using clipboard
 " https://evertpot.com/osx-tmux-vim-copy-paste-clipboard/
 set clipboard=unnamed
+
+colorscheme codedark

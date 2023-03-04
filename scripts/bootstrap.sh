@@ -19,11 +19,14 @@ brew install --cask cheatsheet
 brew install --cask docker
 brew install --cask dropbox
 brew install --cask expressvpn
+brew install --cask gimp
 brew install --cask google-chrome
+brew install --cask inkscape
 brew install --cask iterm2
 brew install --cask itk-snap
 brew install --cask keka
 brew install --cask mactex
+brew install --cask qbittorrent
 brew install --cask slicer
 brew install --cask spectacle
 brew install --cask spotify
@@ -37,6 +40,7 @@ brew install --cask zotero
 brew install \
   cmake \
   ffmpeg \
+  gh \
   htop \
   imagemagick \
   poppler \

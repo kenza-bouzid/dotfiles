@@ -21,10 +21,6 @@ rhist() {
 # For the dotfiles repo
 alias gtree='git ls-tree -r master --name-only'
 
-# (De)activate conda envs
-alias act='conda activate'
-alias dact='conda deactivate'
-
 # Open man pages as PDF (https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789)
 function manpdf() {
  man -t "${1}" | open -f -a /Applications/Preview.app/
@@ -55,3 +51,12 @@ alias ffprobe='ffprobe -hide_banner'
 
 # Better man pages
 alias man="tldr"
+
+alias c="code"
+alias z="exec zsh"
+alias cz="code ~/.zshrc"
+alias vz="vim ~/.zshrc"
+
+alias gai="gh copilot suggest"
+alias gaig="gh copilot suggest -t git"
+alias gais="gh copilot suggest -t shell"

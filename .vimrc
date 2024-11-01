@@ -89,4 +89,5 @@ set undofile
 " https://evertpot.com/osx-tmux-vim-copy-paste-clipboard/
 set clipboard=unnamed
 
-colorscheme codedark
+colorscheme dracula
+

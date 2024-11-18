@@ -56,7 +56,18 @@ alias c="code"
 alias z="exec zsh"
 alias cz="code ~/.zshrc"
 alias vz="vim ~/.zshrc"
+aliases_file="$ZSH_CUSTOM/aliases.zsh"
+alias ca="code $aliases_file"
+alias va="vim $aliases_file"
 
 alias gai="gh copilot suggest"
 alias gaig="gh copilot suggest -t git"
 alias gais="gh copilot suggest -t shell"
+
+cg () {
+  cd ~/git/"$1"
+}
+
+ghf() {
+  git clone git@github.com/fepegar/"$1".git
+}

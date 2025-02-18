@@ -54,10 +54,10 @@ alias man="tldr"
 
 alias c="code"
 alias z="exec zsh"
-alias cz="code ~/.zshrc"
+alias ez="code ~/.zshrc"
 alias vz="vim ~/.zshrc"
 aliases_file="$ZSH_CUSTOM/aliases.zsh"
-alias ca="code $aliases_file"
+alias ea="code $aliases_file"
 alias va="vim $aliases_file"
 
 alias gai="gh copilot suggest"
@@ -69,5 +69,7 @@ cg () {
 }
 
 ghf() {
-  git clone git@github.com/fepegar/"$1".git
+  git clone git@github.com:fepegar/"$1".git
 }
+
+alias cat="bat --style=plain"

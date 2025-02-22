@@ -1,0 +1,23 @@
+[tools]
+"aqua:atuinsh/atuin" = "latest"
+yazi = "latest"
+fzf = "latest"
+zoxide = "latest"
+fd = "latest"
+ripgrep = "latest"
+bat = "latest"
+eza = "latest"
+usage = "latest"
+"aqua:tealdeer-rs/tealdeer" = "latest"
+viddy = "latest"
+dust = "latest"
+helix = "latest"
+starship = "latest"
+jj = "latest"
+gh = "latest"
+uv = "latest"
+delta = "latest"
+direnv = "latest"
+
+[env]
+JUPYTER_PLATFORM_DIRS=1

@@ -1,0 +1,10 @@
+cmake
+ffmpeg
+gh
+htop
+imagemagick
+just
+poppler
+tmux
+tree
+wget

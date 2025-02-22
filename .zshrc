@@ -1,0 +1,140 @@
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Load zsh plugins
+source ~/.antidote/antidote.zsh
+antidote load
+
+# source $ZSH/oh-my-zsh.sh
+
+# iTerm2
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+
+# Cargo
+. "$HOME/.cargo/env"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+# autojump
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+eval "$(direnv hook zsh)"
+
+# atuin
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh)"
+
+# mise-en-place
+eval "$(mise activate zsh)"
+
+# starship
+eval "$(starship init zsh)"
+
+# uv autocomplete
+# https://github.com/astral-sh/uv/issues/8432#issuecomment-2453494736
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
+_uv_run_mod() {
+    if [[ "$words[2]" == "run" && "$words[CURRENT]" != -* ]]; then
+        _arguments '*:filename:_files'
+    else
+        _uv "$@"
+    fi
+}
+compdef _uv_run_mod uv
+
+# update uv
+uv self update > /dev/null 2>&1
+
+# yazi
+# From https://yazi-rs.github.io/docs/quick-start#shell-wrapper
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+# Store only if the command was successful
+# export PYPI_TOKEN=$(pass show Python/pypi-token 2>/dev/null || echo "")
+# export TEST_PYPI_TOKEN=$(pass show Python/test-pypi-token 2>/dev/null || echo "")
+
+
+# # # ALIASES # # #
+
+# Pretty print the path (https://github.com/jeffcole/dotfiles/blob/master/aliases)
+alias path='echo $PATH | tr -s ":" "\n" | sort'
+
+alias pl='print -l'
+
+# Improve less
+alias less='less -MN'
+
+# Directories size
+alias diru='du -sh * | gsort -hr'
+alias dirua='du -sh * .* | gsort -hr'
+
+# For the dotfiles repo
+alias gtree='git ls-tree -r master --name-only'
+
+# Python HTTP server
+alias server='python3 -m http.server'
+
+# 3D Slicer
+alias slicer='/Applications/Slicer.app/Contents/MacOS/Slicer'
+
+# Get public IP
+alias ip="curl ifconfig.me"
+
+# Free space
+alias free="brew cleanup && uv cache clean"
+
+alias clc="clear"
+
+alias ffmpeg='ffmpeg -hide_banner -loglevel warning'
+alias ffprobe='ffprobe -hide_banner'
+
+# Better man pages
+alias man="tldr"
+alias cat="bat --style=plain"
+alias ls="eza"
+alias l="eza -lah"
+alias watch="viddy"
+alias diff="delta"
+alias du="dust -d 1 ."
+alias top="htop"
+
+alias c="code"
+alias z="exec zsh"
+alias ez="code ~/.zshrc"
+alias vz="vim ~/.zshrc"
+aliases_file="$ZSH_CUSTOM/aliases.zsh"
+alias ea="code $aliases_file"
+alias va="vim $aliases_file"
+
+alias gai="gh copilot suggest"
+alias gaig="gh copilot suggest -t git"
+alias gais="gh copilot suggest -t shell"
+
+alias tree="tree -a"
+
+alias grm="git rm"
+alias gmv="git mv"
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  alias op="xdg-open"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  alias op="open"
+  alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+  alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+fi
+
+cg () {
+  cd ~/git/"$1"
+}
+
+ghf() {
+  git clone git@github.com:fepegar/"$1".git
+}

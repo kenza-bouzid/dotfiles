@@ -1,0 +1,15 @@
+docker
+dropbox
+expressvpn
+gimp
+google-chrome
+inkscape
+iterm2
+itk-snap
+keka
+slicer
+spotify
+vlc
+visual-studio-code
+zoom
+zotero

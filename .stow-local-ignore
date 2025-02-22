@@ -3,5 +3,5 @@
 justfile
 vscode_extensions
 Dockerfile
-*.md
-scripts/
+README.md
+/scripts

@@ -1,3 +1,6 @@
+default:
+    @just --list
+
 @install_mise:
     curl https://mise.run | sh
 

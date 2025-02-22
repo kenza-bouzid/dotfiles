@@ -5,6 +5,7 @@ htop
 imagemagick
 just
 poppler
+stow
 tmux
 tree
 wget

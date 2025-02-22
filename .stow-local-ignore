@@ -1,0 +1,7 @@
+.git
+.gitignore
+justfile
+vscode_extensions
+Dockerfile
+*.md
+scripts/

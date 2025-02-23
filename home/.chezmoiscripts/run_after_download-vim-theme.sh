@@ -1,6 +1,6 @@
 #! /bin/bash
 
-themes_dir="~/.vim/pack/themes/start"
+themes_dir="$HOME/.vim/pack/themes/start"
 if [ ! -d "$themes_dir" ]; then
   mkdir -p $themes_dir
   cd $themes_dir

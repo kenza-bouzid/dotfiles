@@ -5,13 +5,8 @@
 source ~/.antidote/antidote.zsh
 antidote load
 
-# source $ZSH/oh-my-zsh.sh
-
 # iTerm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
-
-# Cargo
-. "$HOME/.cargo/env"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform

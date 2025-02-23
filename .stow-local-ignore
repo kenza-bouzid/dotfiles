@@ -1,7 +1,0 @@
-.git
-.gitignore
-justfile
-vscode_extensions
-Dockerfile
-README.md
-/scripts

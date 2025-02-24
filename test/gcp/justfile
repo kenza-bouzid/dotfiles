@@ -1,32 +1,38 @@
 PROJECT_ID := "virtual-machine-451721"
-USER_IDENTIFIER := "fepegar@gmail.com"
 VM_NAME := "dotfiles-vm"
 ZONE := "us-central1-a"
 
 test:
     @just setup
     @just create
-    echo "Waiting 10 seconds for the VM to be ready..."
-    @sleep 10
+    echo "Waiting 20 seconds for the VM to be ready..."
+    @sleep 20
+    @just apply
     @just connect
     @just destroy
 
-remake: destroy create
-
-install:
-    mise use gcloud terraform
-
-setup: install
-    gcloud auth application-default login
-    gcloud config set project $PROJECT_ID
+setup:
+    #!/usr/bin/env bash
+    mise use gcloud
+    if ! gcloud auth application-default print-access-token &>/dev/null; then
+        gcloud auth application-default login
+    fi
+    gcloud config set project {{PROJECT_ID}}
     gcloud services enable compute.googleapis.com
 
-create: install
+create:
+    mise use terraform
     terraform init
     terraform apply -auto-approve
+
+destroy:
+    terraform destroy -auto-approve
+
+remake: destroy create
 
 connect:
     gcloud compute ssh --zone {{ZONE}} {{VM_NAME}}
 
-destroy:
-    terraform destroy -auto-approve
+apply:
+    gcloud compute ssh --zone {{ZONE}} {{VM_NAME}} --command 'sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply fepegar'
+    @just connect

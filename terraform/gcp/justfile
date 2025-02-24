@@ -1,0 +1,32 @@
+PROJECT_ID := "virtual-machine-451721"
+USER_IDENTIFIER := "fepegar@gmail.com"
+VM_NAME := "dotfiles-vm"
+ZONE := "us-central1-a"
+
+test:
+    @just setup
+    @just create
+    echo "Waiting 10 seconds for the VM to be ready..."
+    @sleep 10
+    @just connect
+    @just destroy
+
+remake: destroy create
+
+install:
+    mise use gcloud terraform
+
+setup: install
+    gcloud auth application-default login
+    gcloud config set project $PROJECT_ID
+    gcloud services enable compute.googleapis.com
+
+create: install
+    terraform init
+    terraform apply -auto-approve
+
+connect:
+    gcloud compute ssh --zone {{ZONE}} {{VM_NAME}}
+
+destroy:
+    terraform destroy -auto-approve

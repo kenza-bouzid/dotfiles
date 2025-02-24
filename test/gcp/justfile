@@ -8,12 +8,13 @@ test:
     echo "Waiting 20 seconds for the VM to be ready..."
     @sleep 20
     @just apply
-    @just connect
-    @just destroy
+    @just clean
 
-setup:
-    #!/usr/bin/env bash
+install-gcloud:
     mise use gcloud
+
+setup: install-gcloud
+    #!/usr/bin/env bash
     if ! gcloud auth application-default print-access-token &>/dev/null; then
         gcloud auth application-default login
     fi
@@ -36,3 +37,10 @@ connect:
 apply:
     gcloud compute ssh --zone {{ZONE}} {{VM_NAME}} --command 'sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply fepegar'
     @just connect
+
+clean: destroy
+    rm mise.toml
+    rm -r .terraform
+    rm .terraform.lock.hcl
+    rm terraform.tfstate
+    rm terraform.tfstate.backup

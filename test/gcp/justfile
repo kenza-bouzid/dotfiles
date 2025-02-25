@@ -10,10 +10,10 @@ test:
     @just apply
     @just clean
 
-install-gcloud:
+install:
     mise use gcloud
 
-setup: install-gcloud
+setup: install
     #!/usr/bin/env bash
     if ! gcloud auth application-default print-access-token &>/dev/null; then
         gcloud auth application-default login
@@ -38,9 +38,11 @@ apply:
     gcloud compute ssh --zone {{ZONE}} {{VM_NAME}} --command 'sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply fepegar'
     @just connect
 
-clean: destroy
+clean:
     rm mise.toml
     rm -r .terraform
     rm .terraform.lock.hcl
     rm terraform.tfstate
     rm terraform.tfstate.backup
+
+finish: destroy clean

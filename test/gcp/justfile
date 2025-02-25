@@ -28,7 +28,7 @@ setup: install
     gcloud services enable compute.googleapis.com
 
 create:
-    terraform init
+    terraform init -upgrade
     terraform apply -auto-approve
 
 destroy:

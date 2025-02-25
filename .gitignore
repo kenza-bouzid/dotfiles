@@ -3,3 +3,4 @@
 .terraform*
 terraform.*
 mise.toml
+*.tfplan

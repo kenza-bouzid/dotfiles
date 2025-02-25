@@ -3,7 +3,10 @@ VM_NAME := "dotfiles-vm"
 
 export UV_PRERELEASE := "allow"
 
-test:
+default:
+    @just --list
+
+run:
     @just setup
     @just create
     echo "Waiting 20 seconds for the VM to be ready..."
@@ -16,23 +19,33 @@ install:
     uv pip install azure-cli
 
 setup: install
-    #!/usr/bin/env bash
+    #!/usr/bin/env zsh
     if ! uv run az account show &>/dev/null; then
         uv run az login
     fi
     uv run az account set --subscription {{SUBSCRIPTION_ID}}
 
 create:
-    #!/usr/bin/env bash
+    #!/usr/bin/env zsh
     mise use terraform
     terraform init -upgrade
     terraform plan -out main.tfplan
     terraform apply -auto-approve main.tfplan
+
     resource_group_name=$(terraform output -raw resource_group_name)
     uv run az vm list \
         --resource-group $resource_group_name \
         --query "[].{\"VM Name\":name}" \
         -o table
+
+ssh:
+    #!/usr/bin/env zsh
+    resource_group_name=$(terraform output -raw resource_group_name)
+    uv run az vm user update \
+        --resource-group $resource_group_name \
+        --name {{VM_NAME}} \
+        --username fernando \
+        --ssh-key-value "$(ssh-add -L | head -n 1)"
 
 destroy:
     terraform plan -destroy -out main.destroy.tfplan
@@ -43,19 +56,17 @@ remake: destroy create
 connect:
     #!/usr/bin/env bash
     resource_group=$(terraform output -raw resource_group_name)
-    az ssh vm --resource-group {{resource_group}} --name {{VM_NAME}}
+    uv run az ssh vm \
+        --resource-group $resource_group \
+        --name {{VM_NAME}} \
+        --local-user fernando
 
 apply:
     #!/usr/bin/env bash
-    az ssh vm --resource-group {{RESOURCE_GROUP}} --name {{VM_NAME}} --command 'sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply fepegar'
-    @just connect
-
-@clean:
-    rm -rf .venv
-    rm -f mise.toml
-    rm -rf .terraform
-    rm -f .terraform.lock.hcl
-    rm -f terraform.tfstate
-    rm -f terraform.tfstate.backup
-
-finish: destroy clean
+    resource_group=$(terraform output -raw resource_group_name)
+    uv run az ssh vm \
+        --resource-group $resource_group \
+        --name {{VM_NAME}} \
+        --local-user fernando \
+            -- \
+            -t 'sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply fepegar; zsh'

@@ -2,19 +2,22 @@ PROJECT_ID := "virtual-machine-451721"
 VM_NAME := "dotfiles-vm"
 ZONE := "us-central1-a"
 
-test:
+default:
+    @just --list
+
+run:
     just setup
     just create
     echo "Waiting 20 seconds for the VM to be ready..."
     sleep 20
     just apply
-    just clean
+    just destroy
 
 install:
     mise use gcloud terraform
 
 setup: install
-    #!/usr/bin/env bash
+    #!/usr/bin/env zsh
     if ! gcloud auth application-default print-access-token &>/dev/null; then
       gcloud auth application-default login
     fi

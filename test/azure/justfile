@@ -1,0 +1,50 @@
+SUBSCRIPTION_ID := "98fd3145-0fad-4970-9164-08dfe291b32f"
+VM_NAME := "dotfiles-vm"
+
+export UV_PRERELEASE := "allow"
+
+test:
+    @just setup
+    @just create
+    echo "Waiting 20 seconds for the VM to be ready..."
+    @sleep 20
+    @just apply
+    @just clean
+
+install:
+    uv venv --python 3.10
+    uv pip install azure-cli
+
+setup: install
+    #!/usr/bin/env bash
+    if ! uv run az account show &>/dev/null; then
+        uv run az login
+    fi
+    uv run az account set --subscription {{SUBSCRIPTION_ID}}
+
+create:
+    mise use terraform
+    terraform init
+    terraform apply -auto-approve
+
+destroy:
+    terraform destroy -auto-approve
+
+remake: destroy create
+
+connect:
+    az ssh vm --resource-group {{RESOURCE_GROUP}} --name {{VM_NAME}}
+
+apply:
+    az ssh vm --resource-group {{RESOURCE_GROUP}} --name {{VM_NAME}} --command 'sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply fepegar'
+    @just connect
+
+@clean:
+    rm -rf .venv
+    rm -f mise.toml
+    rm -rf .terraform
+    rm -f .terraform.lock.hcl
+    rm -f terraform.tfstate
+    rm -f terraform.tfstate.backup
+
+finish: destroy clean

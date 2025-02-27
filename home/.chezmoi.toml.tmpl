@@ -1,0 +1,9 @@
+{{- $macos := false }}
+
+{{- if eq .chezmoi.os "darwin" -}}
+{{-   $macos = true -}}
+{{- end -}}
+
+
+[data]
+    macos = {{ $macos }}

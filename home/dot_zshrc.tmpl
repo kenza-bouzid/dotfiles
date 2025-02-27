@@ -2,11 +2,10 @@
 source ~/.antidote/antidote.zsh
 antidote load
 
+{{- if .macos }}
 # iTerm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
-
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
+{{- end }}
 
 # atuin
 . "$HOME/.atuin/bin/env"
@@ -111,13 +110,14 @@ alias tree="tree -a"
 alias grm="git rm"
 alias gmv="git mv"
 
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  alias op="xdg-open"
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-  alias op="open"
-  alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-  alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-fi
+{{- if .macos }}
+alias op="open"
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+{{ else }}
+alias op="xdg-open"
+{{- end }}
+
 
 cg () {
   cd ~/git/"$1"

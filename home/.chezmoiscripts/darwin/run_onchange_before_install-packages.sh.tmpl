@@ -1,0 +1,60 @@
+#!/bin/bash
+
+set -eufo pipefail
+
+# TODO: remove packages already in mise
+
+{{ $brews := list
+     "act"
+     "bat"
+     "btop"
+     "curl"
+     "dockutil"
+     "eza"
+     "fd"
+     "ffmpeg"
+     "fzf"
+     "gh"
+     "git"
+     "imagemagick"
+     "imgcat"
+     "just"
+     "poppler"
+     "ripgrep"
+     "shellcheck"
+     "terraform"
+     "tmux"
+     "tree"
+     "wget"
+     "yt-dlp" -}}
+{{ $casks := list
+     "docker"
+     "dropbox"
+     "expressvpn"
+     "ghostty"
+     "gimp"
+     "google-chrome"
+     "inkscape"
+     "iterm2"
+     "itk-snap"
+     "keka"
+     "mactex"
+     "scroll-reverser"
+     "slicer"
+     "spectacle"
+     "spotify"
+     "stremio"
+     "vlc"
+     "visual-studio-code"
+     "whatsapp"
+     "zoom"
+     "zotero" -}}
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+{{ range ($brews | sortAlpha | uniq) -}}
+brew "{{ . }}"
+{{ end -}}
+{{ range ($casks | sortAlpha | uniq) -}}
+cask "{{ . }}"
+{{ end -}}
+EOF

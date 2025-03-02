@@ -1,5 +1,6 @@
 README.md
-scripts/
-scripts/**
 justfile
 
+{{ if ne .chezmoi.os "darwin" }}
+.chezmoiscripts/darwin/**
+{{ end }}

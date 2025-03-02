@@ -18,6 +18,7 @@ gh = "latest"
 uv = "latest"
 delta = "latest"
 direnv = "latest"
+neovim = "latest"
 
 [env]
 JUPYTER_PLATFORM_DIRS=1

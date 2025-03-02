@@ -2,10 +2,10 @@
 source ~/.antidote/antidote.zsh
 antidote load
 
-{{- if .macos }}
+{{ if .macos }}
 # iTerm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
-{{- end }}
+{{ end }}
 
 # atuin
 . "$HOME/.atuin/bin/env"
@@ -94,7 +94,7 @@ alias l="eza -lah"
 alias watch="viddy"
 alias diff="delta"
 alias du="dust -d 1 ."
-alias top="htop"
+alias top="btop"
 
 alias c="code"
 alias z="exec zsh"
@@ -113,13 +113,13 @@ alias tree="tree -a"
 alias grm="git rm"
 alias gmv="git mv"
 
-{{- if .macos }}
+{{ if .macos }}
 alias op="open"
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 {{ else }}
 alias op="xdg-open"
-{{- end }}
+{{ end }}
 
 
 cg () {

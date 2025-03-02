@@ -2,10 +2,9 @@ export HISTFILE="$HOME/.zsh_history"
 export HISTFILESIZE=1000000000
 export HISTSIZE=1000000000
 
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-elif [[ "$OSTYPE" == "darwin"* ]]; then
+{{ if .macos }}
   export HOMEBREW_NO_AUTO_UPDATE=1
-fi
+{{ end }}
 
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.local/bin

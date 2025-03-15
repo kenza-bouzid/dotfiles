@@ -4,3 +4,7 @@ justfile
 {{ if ne .chezmoi.os "darwin" }}
 .chezmoiscripts/darwin/**
 {{ end }}
+
+{{ if ne .chezmoi.os "windows" }}
+.chezmoiscripts/windows/**
+{{ end }}

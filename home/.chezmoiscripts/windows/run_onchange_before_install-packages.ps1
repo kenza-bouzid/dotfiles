@@ -1,3 +1,5 @@
+wsl --install
+
 $apps = @(
     "7zip.7zip",
     "DigitalScholar.Zotero",

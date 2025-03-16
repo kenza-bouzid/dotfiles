@@ -15,15 +15,15 @@ run:
     @just clean
 
 install:
-    uv venv --python 3.10
-    uv pip install azure-cli
+    uv tool install --python=3.11 --prerelease=allow --with=pip azure-cli
+    az extension add --name ssh
 
 setup: install
     #!/usr/bin/env zsh
-    if ! uv run az account show &>/dev/null; then
-        uv run az login
+    if ! az account show &>/dev/null; then
+        az login
     fi
-    uv run az account set --subscription {{SUBSCRIPTION_ID}}
+    az account set --subscription {{SUBSCRIPTION_ID}}
 
 create:
     #!/usr/bin/env zsh
@@ -33,15 +33,15 @@ create:
     terraform apply -auto-approve main.tfplan
 
     resource_group_name=$(terraform output -raw resource_group_name)
-    uv run az vm list \
+    az vm list \
         --resource-group $resource_group_name \
         --query "[].{\"VM Name\":name}" \
         -o table
 
-ssh:
+ssh: setup
     #!/usr/bin/env zsh
     resource_group_name=$(terraform output -raw resource_group_name)
-    uv run az vm user update \
+    az vm user update \
         --resource-group $resource_group_name \
         --name {{VM_NAME}} \
         --username fernando \
@@ -53,18 +53,18 @@ destroy:
 
 remake: destroy create
 
-connect:
+connect: ssh
     #!/usr/bin/env bash
     resource_group=$(terraform output -raw resource_group_name)
-    uv run az ssh vm \
+    az ssh vm \
         --resource-group $resource_group \
         --name {{VM_NAME}} \
         --local-user fernando
 
-apply:
+apply: ssh
     #!/usr/bin/env bash
     resource_group=$(terraform output -raw resource_group_name)
-    uv run az ssh vm \
+    az ssh vm \
         --resource-group $resource_group \
         --name {{VM_NAME}} \
         --local-user fernando \

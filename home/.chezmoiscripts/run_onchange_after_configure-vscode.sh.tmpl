@@ -1,6 +1,6 @@
-{{ if not .headless -}}
+{{- if not .headless -}}
 
-{{ $extensions := list
+{{- $extensions := list
      "bierner.markdown-mermaid"
      "charliermarsh.ruff"
      "christian-kohler.path-intellisense"
@@ -29,9 +29,6 @@
      "ms-vscode-remote.remote-ssh"
      "ms-vscode-remote.remote-ssh-edit"
      "ms-vscode.makefile-tools"
-{{- if eq .chezmoi.os "windows" -}}
-     "ms-vscode.powershell"
-{{- end}}
      "ms-vscode.remote-explorer"
      "skellock.just"
      "tamasfe.even-better-toml"
@@ -40,13 +37,18 @@
      "visualstudioexptteam.vscodeintellicode"
      "yzane.markdown-pdf"
      "yzhang.markdown-all-in-one" -}}
+{{- end -}}
+
+{{- if eq .chezmoi.os "windows" -}}
+{{- $extensions = append $extensions "ms-vscode.powershell" -}}
+{{- end -}}
 
 #!/bin/bash
 
 set -eufo pipefail
 
-{{ range $extensions -}}
+{{- range $extensions -}}
 code --force --install-extension {{ . }}
-{{ end -}}
+{{- end -}}
 
-{{ end -}}
+{{- end -}}

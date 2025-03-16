@@ -1,54 +1,55 @@
-{{- if not .headless -}}
+{{- $extensions := list -}}
 
-{{- $extensions := list
-     "bierner.markdown-mermaid"
-     "charliermarsh.ruff"
-     "christian-kohler.path-intellisense"
-     "davidanson.vscode-markdownlint"
-     "dracula-theme.theme-dracula"
-     "eamodio.gitlens"
-     "esbenp.prettier-vscode"
-     "github.copilot"
-     "github.copilot-chat"
-     "github.vscode-github-actions"
-     "github.vscode-pull-request-github"
-     "hashicorp.terraform"
-     "james-yu.latex-workshop"
-     "kevinrose.vsc-python-indent"
-     "lextudio.restructuredtext"
-     "mechatroner.rainbow-csv"
-     "ms-pyright.pyright"
-     "ms-python.debugpy"
-     "ms-python.python"
-     "ms-toolsai.jupyter"
-     "ms-toolsai.jupyter-keymap"
-     "ms-toolsai.jupyter-renderers"
-     "ms-toolsai.vscode-ai"
-     "ms-toolsai.vscode-ai-remote"
-     "ms-vscode-remote.remote-containers"
-     "ms-vscode-remote.remote-ssh"
-     "ms-vscode-remote.remote-ssh-edit"
-     "ms-vscode.makefile-tools"
-     "ms-vscode.remote-explorer"
-     "skellock.just"
-     "tamasfe.even-better-toml"
-     "usernamehw.errorlens"
-     "visualstudioexptteam.intellicode-api-usage-examples"
-     "visualstudioexptteam.vscodeintellicode"
-     "yzane.markdown-pdf"
-     "yzhang.markdown-all-in-one" -}}
-{{- end -}}
+{{- $extensions = list
+    "bierner.markdown-mermaid"
+    "charliermarsh.ruff"
+    "christian-kohler.path-intellisense"
+    "davidanson.vscode-markdownlint"
+    "dracula-theme.theme-dracula"
+    "eamodio.gitlens"
+    "esbenp.prettier-vscode"
+    "github.copilot"
+    "github.copilot-chat"
+    "github.vscode-github-actions"
+    "github.vscode-pull-request-github"
+    "hashicorp.terraform"
+    "james-yu.latex-workshop"
+    "kevinrose.vsc-python-indent"
+    "lextudio.restructuredtext"
+    "mechatroner.rainbow-csv"
+    "ms-pyright.pyright"
+    "ms-python.debugpy"
+    "ms-python.python"
+    "ms-toolsai.jupyter"
+    "ms-toolsai.jupyter-keymap"
+    "ms-toolsai.jupyter-renderers"
+    "ms-toolsai.vscode-ai"
+    "ms-toolsai.vscode-ai-remote"
+    "ms-vscode-remote.remote-containers"
+    "ms-vscode-remote.remote-ssh"
+    "ms-vscode-remote.remote-ssh-edit"
+    "ms-vscode.makefile-tools"
+    "ms-vscode.remote-explorer"
+    "skellock.just"
+    "tamasfe.even-better-toml"
+    "usernamehw.errorlens"
+    "visualstudioexptteam.intellicode-api-usage-examples"
+    "visualstudioexptteam.vscodeintellicode"
+    "yzane.markdown-pdf"
+    "yzhang.markdown-all-in-one" -}}
 
 {{- if eq .chezmoi.os "windows" -}}
-{{- $extensions = append $extensions "ms-vscode.powershell" -}}
+  {{- $extensions = append $extensions "ms-vscode.powershell" -}}
 {{- end -}}
 
 #!/bin/bash
 
 set -eufo pipefail
 
-{{- range $extensions -}}
-code --force --install-extension {{ . }}
-{{- end -}}
-
-{{- end -}}
+if command -v code &>/dev/null; then
+  {{- range $extensions }}
+  code --force --install-extension {{ . }}
+  {{- end }}
+else
+  echo "'code' command not found; skipping extension installation." >&2
+fi

@@ -18,7 +18,14 @@ eval "$(mise activate zsh)"
 eval "$(starship init zsh)"
 
 # https://docs.github.com/en/copilot/managing-copilot/configure-personal-settings/configuring-github-copilot-in-the-cli#zsh
-eval "$(gh copilot alias -- zsh)"
+# If "gh copilot" fails echo a warning
+if ! gh copilot --version 2>/dev/null; then
+  echo "Warning: gh copilot is not installed or not configured properly."
+  echo "Run 'gh auth login' to configure GitHub CLI."
+  echo "Then, run 'gh extension install github/gh-copilot' to install the extension."
+else
+  eval "$(gh copilot alias -- zsh)"
+fi
 
 # uv autocomplete
 # https://github.com/astral-sh/uv/issues/8432#issuecomment-2453494736

@@ -19,7 +19,7 @@ eval "$(starship init zsh)"
 
 # https://docs.github.com/en/copilot/managing-copilot/configure-personal-settings/configuring-github-copilot-in-the-cli#zsh
 # If "gh copilot" fails echo a warning
-if ! gh copilot --version 2>/dev/null; then
+if ! gh copilot --version > /dev/null; then
   echo "Warning: gh copilot is not installed or not configured properly."
   echo "Run 'gh auth login' to configure GitHub CLI."
   echo "Then, run 'gh extension install github/gh-copilot' to install the extension."

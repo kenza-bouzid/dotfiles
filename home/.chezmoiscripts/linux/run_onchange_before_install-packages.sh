@@ -3,4 +3,6 @@
 set -eufo pipefail
 
 sudo apt-get install -y \
-    tree
+    nvtop \
+    tree \
+    unzip

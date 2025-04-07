@@ -44,7 +44,7 @@ ssh: setup
     az vm user update \
         --resource-group $resource_group_name \
         --name {{VM_NAME}} \
-        --username fernando \
+        --username kenza \
         --ssh-key-value "$(ssh-add -L | head -n 1)"
 
 destroy:
@@ -59,7 +59,7 @@ connect: ssh
     az ssh vm \
         --resource-group $resource_group \
         --name {{VM_NAME}} \
-        --local-user fernando
+        --local-user kenza
 
 apply: ssh
     #!/usr/bin/env bash
@@ -67,6 +67,6 @@ apply: ssh
     az ssh vm \
         --resource-group $resource_group \
         --name {{VM_NAME}} \
-        --local-user fernando \
+        --local-user kenza \
             -- \
             -t 'sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply fepegar; zsh'

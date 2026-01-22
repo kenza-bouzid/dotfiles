@@ -69,4 +69,4 @@ apply: ssh
         --name {{VM_NAME}} \
         --local-user kenza \
             -- \
-            -t 'sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply fepegar; zsh'
+            -t 'sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply kenza-bouzid; zsh'

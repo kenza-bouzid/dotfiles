@@ -40,5 +40,5 @@ connect:
     gcloud compute ssh --zone {{ZONE}} {{VM_NAME}}
 
 apply:
-    gcloud compute ssh --zone {{ZONE}} {{VM_NAME}} --command 'sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply fepegar'
+    gcloud compute ssh --zone {{ZONE}} {{VM_NAME}} --command 'sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply kenza-bouzid'
     @just connect
